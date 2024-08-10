@@ -1,5 +1,5 @@
-﻿define g = Character("Gata", color="#089ea8")
-define h = Character("Humano", color="#e8a43f")
+﻿define g = Character("Patricia", color="#926a54")
+define h = Character("Norberto", color="#28abe7")
 
 image Gata:
     "gata"
@@ -12,6 +12,9 @@ label start:
     scene room
     with dissolve
 
+    g "Soy la gata"
+    h "Soy el humano"
+    
     "este es un cambio de pixi :)"
     "pixi"
     "Pixi invita la cena ;)"
