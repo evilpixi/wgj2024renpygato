@@ -12,6 +12,7 @@ label start:
     scene room
     with dissolve
 
+    "este es un cambio de pixi :)"
     "pixi"
     "Una gata en una habitación con un humano muy ocupado..."
 
