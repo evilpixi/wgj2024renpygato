@@ -1,32 +1,69 @@
-﻿# Coloca el código de tu juego en este archivo.
+﻿define g = Character("Gata", color="#089ea8")
+define h = Character("Humano", color="#e8a43f")
 
-# Declara los personajes usados en el juego como en el ejemplo:
+image Gata:
+    "gata"
+    zoom 0.1
 
-define e = Character("Eileen")
-
-
-# El juego comienza aquí.
+# The game starts here.
 
 label start:
+    
+    scene room
+    with dissolve
 
-    # Muestra una imagen de fondo: Aquí se usa un marcador de posición por
-    # defecto. Es posible añadir un archivo en el directorio 'images' con el
-    # nombre "bg room.png" or "bg room.jpg" para que se muestre aquí.
+    "Una gata en una habitación con un humano muy ocupado..."
 
-    scene bg room
+    play music "Sonder.mp3"
 
-    # Muestra un personaje: Se usa un marcador de posición. Es posible
-    # reemplazarlo añadiendo un archivo llamado "eileen happy.png" al directorio
-    # 'images'.
+    
+    show Gata at left
+    with dissolve
 
-    show eileen happy
+    g "Qué humano más aburrido..."
+    h "mmmh..."
 
-    # Presenta las líneas del diálogo.
+    "Cómo llamarle la atención?"
 
-    e "Has creado un nuevo juego Ren'Py 123."
+    menu:
+        "Pedir mimos":
+            jump mimos
 
-    e "Añade una historia, imágenes y música, ¡y puedes presentarlo al mundo!"
+        "Empujar taza":
+            jump taza
 
-    # Finaliza el juego:
+# opción A y Bad Ending
+label mimos:
+    play sound ["meow.mp3", "Purr.mp3"]
 
+    show Gata at right
+    with dissolve
+
+    $ renpy.pause(3)
+
+    h "salí de acá! Ahora no...!"
+
+    scene photo_album
+    with dissolve
+
+    $ renpy.pause(5)
+    return
+
+
+# Opción B y Good Ending
+label taza:
+    hide Gata   
+    h "No empujes la taza..."
+    h "..."
+    h "Te dije que no!"
+
+    play sound "mug.mp3"
+
+    $ renpy.pause(1)
+    h "\*\!\%\§\!"
+
+    scene room_bad_ending
+    with dissolve
+
+    $ renpy.pause(5)
     return
