@@ -1,20 +1,25 @@
 ﻿define g = Character("Patricia", color="#926a54")
 define h = Character("Norberto", color="#28abe7")
 
+# la cantidad de 
+default aciertos = 0
+
 image Gata:
     "gata"
     zoom 0.1
 
-# The game starts here.
-
+# Aquí comienza el juego
 label start:
     
     scene room
     with dissolve
 
+    # Aquí iría la introducción
     g "Soy la gata"
     h "Soy el humano"
     
+    jump dia1
+
     "este es un cambio de pixi :)"
     "pixi"
     "Pixi invita la cena ;)"

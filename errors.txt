@@ -1,0 +1,18 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+The label mimos is defined twice, at File "game/dia1.rpy", line 15:
+label mimos:
+and File "game/script.rpy", line 47:
+label mimos:
+
+
+The label taza is defined twice, at File "game/dia1.rpy", line 20:
+label taza:
+and File "game/script.rpy", line 65:
+label taza:
+
+
+Ren'Py Version: Ren'Py 8.2.3.24061702
+Sat Aug 10 19:27:51 2024
