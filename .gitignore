@@ -2,9 +2,9 @@
 
 
 # Ren'Py generated files
-.rpyc
-.rpyb
-.rpymc
+*.rpyc
+*.rpyb
+*.rpymc
 
 # Saved games
 /game/saves/
@@ -17,7 +17,7 @@
 
 # Logs
 /log/
-log.txt
+*log.txt
 
 # Cache
 /game/cache/
