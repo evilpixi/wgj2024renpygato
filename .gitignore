@@ -1,0 +1,30 @@
+/.vscode
+
+# Ren'Py generated files
+.rpyc
+.rpyb
+.rpymc
+
+# Compiled game files
+/game/
+
+# Saved games
+*.save
+
+# Temporary files
+*.swp
+*.swo
+*.~lock.*
+
+# Logs
+/log/
+
+# Cache
+/cache/
+
+# Generated media
+/generated/
+
+# Miscellaneous
+.DS_Store
+Thumbs.db
