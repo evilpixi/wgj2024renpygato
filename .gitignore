@@ -1,14 +1,13 @@
-/.vscode
+/.vscode/
+
 
 # Ren'Py generated files
 .rpyc
 .rpyb
 .rpymc
 
-# Compiled game files
-/game/
-
 # Saved games
+/game/saves/
 *.save
 
 # Temporary files
@@ -18,9 +17,10 @@
 
 # Logs
 /log/
+log.txt
 
 # Cache
-/cache/
+/game/cache/
 
 # Generated media
 /generated/

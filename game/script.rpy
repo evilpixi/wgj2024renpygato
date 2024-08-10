@@ -12,6 +12,7 @@ label start:
     scene room
     with dissolve
 
+    "pixi"
     "Una gata en una habitación con un humano muy ocupado..."
 
     play music "Sonder.mp3"
