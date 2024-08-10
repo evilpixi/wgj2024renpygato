@@ -15,6 +15,7 @@ label start:
     "este es un cambio de pixi :)"
     "pixi"
     "Pixi invita la cena ;)"
+    "pan"
     "Una gata en una habitación con un humano muy ocupado..."
 
     play music "Sonder.mp3"
