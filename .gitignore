@@ -18,6 +18,8 @@
 # Logs
 /log/
 *log.txt
+*errors.txt
+*traceback.txt
 
 # Cache
 /game/cache/
