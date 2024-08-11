@@ -4,10 +4,10 @@ label dia3:
   pause
 
   scene habitacion base dia 
-  show Patricia at Position(xpos=1580, ypos=700)with dissolve
   show humano sentado dia
-  show caja dia
+  show caja dia at Position(xpos=1580, ypos=680)
   show pajaro dia
+  show Patricia at Position(xpos=1580, ypos=700)
   
   
   if comio_planta:
@@ -33,6 +33,8 @@ label dia3:
   g "Si no hay nada que yo pueda hacer, tal vez.. tal vez el pájaro sea la respuesta."
   g "Me acerco despacio a la ventana, pero en el camino mi suave cola marroncita roza una de las cajas de cartón.."
   g "¡qué sensación increíble! Se siente casi.. casi como una caricia."
+  
+  show Patricia at Position(xpos=770, ypos=670)with dissolve
   g "¿Qué voy a hacer? ¿El pájaro realmente va a ayudarme a despertar a Humano?"
   g "¿Y si me rindiera? Humano no va a dejar su caja de luz..."
   g "¿Qué pasaría si eligiera quedarme entre las cajas... si eligiera la caricia del cartón?"
@@ -106,7 +108,7 @@ label ventana:
   hide humano sentado tarde
   show humano sentado noche
   hide caja dia
-  show caja noche
+  show caja noche at Position(xpos=1580, ypos=680)
   hide red tarde
   show red noche
 
@@ -140,7 +142,7 @@ label caja:
   g "Ahora ya me cansé de rascarme y me meto adentro."
   
   hide Patricia
-  show caja gato tarde
+  show caja gato tarde at Position(xpos=1580, ypos=680)
   hide humano sentado tarde 
   show humano girado tarde
   g "Desde esta oscuridad de cartón... el mundo da menos miedo."

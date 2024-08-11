@@ -8,12 +8,12 @@ label dia1:
   show flores dia
   show pajaro dia
   show papel dia
-  show caja dia
+  show caja dia at Position(xpos=1580, ypos=680)
 
   with dissolve
   
   play sound ["stomach.mp3"] 
-  show Patricia at right
+  show Patricia at truecenter
 
   g "Pppprrrrrrr! Pppppprrrrr! Oouh creo que la cena de ayer no me cayó nada bien. Tal vez podría masticar algunas hojitas.. Mmmmm ¡Humano odia que haga eso!"
   $ renpy.pause(1)
@@ -32,6 +32,7 @@ label dia1:
   # Cambio iluminación -> Tarde
   show habitacion base tarde
   show humano sentado tarde
+  show caja tarde at Position(xpos=1580, ypos=680)
   show pajaro tarde
   show papel tarde
   show flores tarde
@@ -52,10 +53,13 @@ label dia1:
       jump papel
 
 label plantas:
-  play sound ["meow_annoyed.mp3"]
-  show Patricia at Position(xpos=650, ypos=460)with dissolve
-  g "Puajj estas hojas no estaban tan ricas como creí. ¿Hace cuánto no las riega?"
+  play sound ["nam.mp3", "meow_annoyed.mp3"]
+  show Patricia at Position(xpos=600, ypos=360)with dissolve
+
+  $ renpy.pause(1)
   show flores comidas tarde 
+  $ renpy.pause(3)
+  g "Puajj estas hojas no estaban tan ricas como creí. ¿Hace cuánto no las riega?"
   g "No importa, todo sea para que se enoje y suba a la terraza. Puaaj puaaj, ¡Uaaacala!"
   $ renpy.pause(1)
   
@@ -80,10 +84,11 @@ label plantas:
   show habitacion base noche with dissolve
   hide humano girado tarde
   show humano sentado noche
-  show caja noche
-  hide pajaro tarde with dissolve
+  show caja noche at Position(xpos=1580, ypos=680)
   show flores comidas noche
   show papel noche
+  hide pajaro tarde with dissolve
+
 
   play sound ["meow_sad.mp3"]
   g "Cuando se sienta ahí, se olvida de todo. Nada de sol, nada de terraza. ¿Y ahora qué?"
@@ -91,9 +96,11 @@ label plantas:
 
 
 label papel:
+  show Patricia at Position(xpos=1800, ypos=900)
   play sound ["meow_purr.mp3", "toilet_paper.mp3"]
   g "Meeeeeowwwwwiiii ¡me había olvidado lo divertido que era jugar con la serpiente de papel!"
   hide papel tarde
+  show Patricia at Position(xpos=700, ypos=600)
   show papel roto tarde
   g "¡Tengo que seguir haciéndolo todas mis vidas!"
   $ renpy.pause(1)
@@ -112,7 +119,7 @@ label papel:
   show habitacion base noche with dissolve
   hide humano de pie
   show humano sentado noche
-  show caja noche
+  show caja noche at Position(xpos=1580, ypos=680)
   hide pajaro tarde with dissolve
   show flores noche
   show papel roto noche

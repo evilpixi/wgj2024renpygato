@@ -4,9 +4,9 @@ label dia2:
   pause
   
   scene habitacion base dia
-  show Patricia at truecenter
+  
   show humano sentado dia
-  show caja dia
+  show caja dia at Position(xpos=1580, ypos=680)
   show pajaro dia
   
   if comio_planta:
@@ -19,8 +19,7 @@ label dia2:
   else:
     show papel
 
-  with dissolve
-  
+  show Patricia at Position(xpos=650, ypos=700)
 
   
   g "¿Hoy es hoy o todavía es ayer? Ya ni siquiera me doy cuenta, cada día es una eternidad infinita."
@@ -43,7 +42,7 @@ label dia2:
   hide humano sentado dia
   show humano sentado tarde
   show pajaro tarde
-  show caja tarde
+  show caja tarde at Position(xpos=1580, ypos=680)
 
   if comio_planta:
     show flores comidas tarde
@@ -67,12 +66,12 @@ label dia2:
       jump teclado
 
 label ofrenda:
+  show Patricia at Position(xpos=770, ypos=670)
   g "¡Meeowwii! Zarpada presa atrapé."
 
   play sound ["meow.mp3"]
   g "Humaaaaaaaaaanoooooooo, ¡mirá lo que tengo para vos!"
 
-  show cucaracha with dissolve
   pause 0.5
 
   g "..."
@@ -87,9 +86,9 @@ label ofrenda:
   hide humano sentado tarde
   show humano sentado noche
   hide caja dia
-  show caja noche
+  show caja noche at Position(xpos=1580, ypos=680)
   hide pajaro tarde
-  hide cucaracha
+  hide cucaracha with dissolve
 
   if comio_planta:
     show flores comidas noche
@@ -128,7 +127,7 @@ label teclado:
   show habitacion base noche with dissolve
   hide humano sentado tarde
   show humano sentado noche
-  show caja noche
+  show caja noche at Position(xpos=1580, ypos=680)
   hide pajaro tarde
 
 

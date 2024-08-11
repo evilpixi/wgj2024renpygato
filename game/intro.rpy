@@ -7,7 +7,7 @@ label intro:
     show humano sentado dia
     show flores dia
     show papel dia
-    show caja dia
+    show caja dia at Position(xpos=1550, ypos=680)
 
     with dissolve
 
