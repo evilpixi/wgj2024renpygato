@@ -13,17 +13,19 @@ label dia3:
   g "¿Qué pasaría si eligiera quedarme entre las cajas... si eligiera la caricia del cartón?"
   menu:
     "Preguntarle la posta al pájaro":
-      $ aciertos += 1
+      $ aciertos += 0
       jump ventana
 
     "Entregarse a la caricia del cartón":
-      $ aciertos += 0
+      $ aciertos += 1
       jump caja
 
 label ventana:
   g "Decido confiar en el pájaro y sigo avanzando hacia la ventana, esquivando las cajas.."
   g "Mientras trepo por el acolchado, siento el calor del sol acariciándome el lomo. Rayos de luz atraviesan la ventana y me envuelven en una calidez antigua, lejana y permanente."
   g "Desde la ventana veo la plaza: árboles frondosos y fuentes de agua, una nena con trenzas sostiene un barrilete naranja."
+  
+  play sound ["meow_far.mp3"]
   g "Saludo al pájaro - Meeeowwwlaa!- mientras el olor a verano despeina mis bigotes. Él se acerca y yo siento como si estuviera sosteniendo un secreto con el pico, sólo para mí."
   g "Cuando está a punto de abrir el pico, saludarme o tal vez soltar el secreto... escucho un grito de terror que me pone los pelos de punta...."
 
@@ -31,6 +33,7 @@ label ventana:
 
   g "Humano al fin me mira... pero está asustado y nervioso."
   g "Quiero explicarle que estoy bien, quiero hablarle del secreto del pájaro, pero me agarra con las manos temblorosas y cierra la ventana con un golpe seco."
+  play sound ["window.mp3"]
 
   g "Los días siguen siendo iguales.. Humano sentado en su escritorio, la comida no tiene sabor."
   g "Pero ahora la ventana tiene rejas y yo observo, desde mi pequeña jaula."
@@ -58,6 +61,7 @@ label caja:
 
   h "Es hora de salir afuera Pat, ¿vamos a la plaza?"
 
+  play sound ["Purr.mp3"]
   g "Ppppprprrrrrr Prrrprprrrrrrr, yo ronroneo. Mientras tanto, la brisa del verano atraviesa mis bigotes."
   jump final
 

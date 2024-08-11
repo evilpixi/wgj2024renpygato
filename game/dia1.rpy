@@ -1,4 +1,7 @@
 label dia1:
+  "DIA 1"
+
+  play sound ["stomach.mp3"] 
   g "Pppprrrrrrr! Pppppprrrrr! Oouh creo que la cena de ayer no me cayó nada bien. Tal vez podría masticar algunas hojitas.. Mmmmm ¡Humano odia que haga eso!"
   $ renpy.pause(1)
 
@@ -16,16 +19,17 @@ label dia1:
   # aqui habría que poner la intro de las decisiones
 
   menu:
-    "Comer plantas":
+    "Masticar hojitas ñam ñam":
       $ aciertos += 1
       jump plantas
 
-    "Jugar con el papel higiénico":
+    "Jugar con la serpiente de papel":
       $ aciertos += 0
       jump papel
 
 
 label plantas:
+  play sound ["meow_annoyed.mp3"]
   g "Puajj estas hojas no estaban tan ricas como creí. ¿Hace cuánto no las riega?"
   g "No importa, todo sea para que se enoje y suba a la terraza. Puaaj puaaj, ¡Uaaacala!"
   $ renpy.pause(1)
@@ -38,28 +42,32 @@ label plantas:
   $ renpy.pause(1)
   
   g "¡Tanto mordisquear para nada! Humano volvió a sentarse y admirar la caja de luz.." 
+  
+  play sound ["meow_sad.mp3"]
   g "Cuando se sienta ahí, se olvida de todo. Nada de sol, nada de terraza. ¿Y ahora qué?"
   jump finDia1
 
 
 label papel:
+  play sound ["meow_purr.mp3"]
   g "Meeeeeowwwwwiiii ¡me había olvidado lo divertido que era jugar con la serpiente de papel!"
   g "¡Tengo que seguir haciéndolo todas mis vidas!"
   $ renpy.pause(1)
   
-  "Mientras araño el papel y lo convierto en tiritas, Humano se acerca a mí." 
-  "Se agacha y me observa primero a mí y después a la gran piel de serpiente blanca desparramada en el piso de madera."
+  g "Mientras araño el papel y lo convierto en tiritas, Humano se acerca a mí."
+  g "Me observa primero a mí y después a la gran piel de serpiente blanca desparramada en el piso de madera."
+  g "Pero ¡ni siquiera le importa! Tiene un caja gigante llena de serpientes de papel guardadas..."
   $ renpy.pause(2)
 
-  "¡Ni siquiera le importa! Ni siquiera se enojó conmigo."
-  "Y lo peor es que no va a salir afuera, tiene un caja gigante llena de serpientes de papel..."
-  "Sí fue divertido.. pero ahora mientras lo veo volver a sentarse frente a la caja de luz...." 
-  "No sé.. algo adentro mío se revuelve, como si la serpiente viviera adentro mío y se retorciera de tristeza."
-  "¿No vamos a salir a la plaza nunca más? ¿Qué voy a hacer?"
+  g "Ahora que vuelve a sentarse frente a la caja de luz...." 
+  g "No sé.. la diversión se apagó y una serpiente de tristeza se retuerce adentro mío."
+
+  play sound ["meow_sad.mp3"]
+  g "¿No vamos a salir a la plaza nunca más?"
   jump finDia1
 
 
 # aqui se juntan ambas opciones y se va al día 2
 label finDia1:
-  "fin del dia 1"
+  "FIN DEL DIA 1"
   jump dia2

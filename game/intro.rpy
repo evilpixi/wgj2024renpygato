@@ -13,6 +13,8 @@ label intro:
 
     # Aquí iría la introducción
     g "Desde que llegó esa caja de luz a la casa, todos los días parecen iguales..."
+    
+    play sound ["meow_attention.mp3"]
     g "¿Estará bien? No parece estar bien. Me gustaría que se diera vuelta y me acariciara como antes."
     g "Ahora casi ni se mueve..."
     g "Sólo se levanta para ir a su caja de agua.. o para buscar comida."
