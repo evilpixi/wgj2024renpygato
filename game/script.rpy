@@ -9,6 +9,12 @@ image habitacion base noche = "bg/fondo_base_noche.png"
 
 # Objetos
 image caja dia = "bg/objetos/caja_dia.png"
+image caja noche ="bg/objetos/caja_noche.png"
+image flores dia = "bg/objetos/flores_dia.png"
+image flores noche = "bg/objetos/flores_noche.png"
+image pajaro = "bg/objetos/pajaro.png"
+image papel = "bg/objetos/papel.png"
+
 
 # la cantidad de 
 default aciertos = 0
