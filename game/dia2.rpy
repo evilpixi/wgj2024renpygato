@@ -1,15 +1,25 @@
 label dia2:
+  scene black with dissolve
   show text "DIA 2"
   pause
   
-  scene habitacion base dia with dissolve
+  scene habitacion base dia
   show Patricia at truecenter
   show humano sentado dia
   show caja dia
+  show pajaro dia
+  
+  if comio_planta:
+    show flores comidas dia
+  else:
+    show flores dia
 
-  $ renpy.pause(2)
-  show pajaro dia with dissolve
-  $ renpy.pause(2)
+  if rompio_papel:
+    show papel roto dia
+  else:
+    show papel
+
+  with dissolve
   
 
   
@@ -34,16 +44,28 @@ label dia2:
   show habitacion base tarde with dissolve
   hide humano sentado dia
   show humano sentado tarde
-  hide pajaro dia
   show pajaro tarde
+  show caja tarde
+
+  if comio_planta:
+    show flores comidas tarde
+  else:
+    show flores tarde
+
+  if rompio_papel:
+    show papel roto tarde
+  else:
+    show papel tarde
 
   menu:
     "Cazar una cena viscosa para Humano":
       $ aciertos += 1
+      $ ofrecio_cucaracha = True
       jump ofrenda
 
     "Aplastar la (odiosa) caja de luz":
       $ aciertos += 0
+      $ aplasto_teclado = True
       jump teclado
 
 label ofrenda:
@@ -51,6 +73,10 @@ label ofrenda:
 
   play sound ["meow.mp3"]
   g "Humaaaaaaaaaanoooooooo, ¡mirá lo que tengo para vos!"
+
+  show cucaracha with dissolve
+  pause 0.5
+
   g "..."
   g "¿Pueden creerlo? Humano miró con asco mi regalo y lo tiró a esa bolsa en donde junta todas esas cosas que ya no le importan más."
   g "Lo hizo mientras se tapaba la nariz. Ni siquiera se dio vuelta para agradecerme. Nada."
@@ -65,12 +91,28 @@ label ofrenda:
   hide caja dia
   show caja noche
   hide pajaro tarde
+  hide cucaracha
+
+  if comio_planta:
+    show flores comidas noche
+  else:
+    show flores noche
+
+  if rompio_papel:
+    show papel roto noche
+  else:
+    show papel noche
+
   play sound ["meow_begging.mp3"]
   g "¿Existo? ¿o estoy empezando a desaparecer?"
   jump finDia2
 
 label teclado:
   g "El primer salto es fácil, lo conozco de memoria."
+
+  hide Patricia with dissolve
+  show teclado gato with dissolve
+
   g "Cuando llego a las piernas de Humano, vuelvo a saltar y finalmente me acurruco sobre el escritorio, tapando con mi cuerpo la caja de luz."
   
   hide Patricia
@@ -86,7 +128,22 @@ label teclado:
   show habitacion base noche with dissolve
   hide humano sentado tarde
   show humano sentado noche
+  show caja noche
   hide pajaro tarde
+
+  hide teclado gato
+  show Patricia at truecenter
+
+  if comio_planta:
+    show flores comidas noche
+  else:
+    show flores noche
+
+  if rompio_papel:
+    show papel roto noche
+  else:
+    show papel noche
+
   play sound ["meow_begging.mp3"]
   g "¿A dónde vas Humano? Estás acá... pero no estás."
   jump finDia2

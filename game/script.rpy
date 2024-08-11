@@ -26,6 +26,11 @@ image humano girado tarde = "character/humano/humano_sentado_girado_tarde.png"
 image humano girado noche = "character/humano/humano_sentado_girado_noche.png"
 image humano de pie = "character/humano/humano_de_pie.png"
 
+# Musica
+define musica_fondo = "audio/music/bgmusic.wav"
+define musica_final_bueno = "audio/music/goodend_music.wav"
+define musica_final_malo = "audio/music/badend_music.wav"
+
 # Objetos
 image caja dia = "bg/objetos/caja_dia.png"
 image caja tarde = "bg/objetos/caja_tarde.png"
@@ -35,9 +40,12 @@ image flores tarde = "bg/objetos/flores_tarde.png"
 image flores noche = "bg/objetos/flores_noche.png"
 image pajaro dia = "bg/objetos/pajaro_dia.png"
 image pajaro tarde = "bg/objetos/pajaro_tarde.png"
+image red tarde = "bg/objetos/red_tarde.png"
+image red noche = "bg/objetos/red_noche.png"
 image papel dia = "bg/objetos/papel_dia.png"
 image papel tarde = "bg/objetos/papel_tarde.png"
 image papel noche = "bg/objetos/papel_noche.png"
+image celular = "bg/objetos/celular.png"
 
 # Sucesos
 image caja gato dia = "bg/objetos/caja_gato_dia.png"
@@ -55,8 +63,15 @@ image red tarde = "bg/objetos/red_tarde.png"
 image red noche = "bg/objetos/red_noche.png"
 
 
-# la cantidad de 
+# variables
 default aciertos = 0
+
+default comio_planta = False
+default rompio_papel = False
+default ofrecio_cucaracha = False
+default aplasto_teclado = False
+default pregunto_pajaro = False
+default jugo_caja = False
 
 image Patricia:
     "gato"
