@@ -10,12 +10,12 @@ label dia3:
   show pajaro dia with dissolve
   $ renpy.pause(2)
   
-  # agregar sonido hornero: play sound ["pajaro.mp3"] 
-  play sound ["stomach.mp3"] 
-
 
   g "Abro los ojos y bostezo. Otra vez todo es igual... no me sorprende."
   g "Humano sentado enfrente de la caja maldita, la comida sin gusto a nada y ese pájaro que todos los días se queda mirándome desde la ventana..."
+  
+  
+  play sound ["hornero.mp3"]
   g "¿por qué me mira, qué quiere?"
   g "Ya fue, me cansé. Necesito que algo cambie, ¡lo necesito desesperadamente!"
   g "Si no hay nada que yo pueda hacer, tal vez.. tal vez el pájaro sea la respuesta."
@@ -92,6 +92,8 @@ label ventana:
 
   play sound ["meow_begging.mp3"]
   g "Los días siguen siendo iguales.. Humano sentado en su escritorio, la comida sin sabor."
+  
+  show final malo with dissolve
   g "Pero ahora la ventana tiene rejas y yo observo, desde mi pequeña jaula."
   g "Al pájaro, nunca más lo volví a ver. Y cuando intento recordar los ojos de Humano, sólo puedo pensar en una luz brillante y dolorosa, como la luz de la caja."
   jump final
@@ -102,11 +104,11 @@ label caja:
   g "Me froto contra ellas, una y otra vez, aprovechando sus filosas superficies."
   g "Ahora ya me cansé de rascarme y me meto adentro."
   
-  show caja_gato
+  hide Patricia
+  show caja gato tarde
+  hide humano sentado tarde 
+  show humano girado tarde
   g "Desde esta oscuridad de cartón... el mundo da menos miedo."
-
-  hide habitacion humano
-  show fondo_base 
   g "De repente, siento un calor conocido."
   g "Una voz me abraza, mientras me sostiene la ternura de una caricia que creí que nunca más iba a volver a sentir..."
   g "¡Son sus manos! Firmes, cálidas y seguras."
@@ -120,18 +122,23 @@ label caja:
   g "Era mi Humano y hoy al fin había vuelto."
 
   h "Es hora de salir afuera Pat, ¿vamos a la plaza?"
-
+  
+  # SFX puerta, pasos, pajaritos
+  play sound ["door.mp3", "footsteps.mp3"]
   hide humano sentado tarde with dissolve
-  hide Patricia with dissolve
+  hide caja gato tarde with dissolve
+  show final bueno with dissolve
+  
+  $ renpy.pause(4) 
+  play sound ["Purr_short.mp3"]
+  g "Ppppprprrrrrr Prrrprprrrrrrr, yo ronroneo." 
 
-  # Agregar un "blur" de la escena
+  
+  play sound ["outside.mp3"]
 
-  play sound ["Purr.mp3"]
-
-  # SFX puerta
-  # SFX pasos
-  # SFX pájaros y árboles
-  g "Ppppprprrrrrr Prrrprprrrrrrr, yo ronroneo. Mientras tanto, la brisa del verano atraviesa mis bigotes."
+  
+  
+  g "Mientras tanto, la brisa del verano atraviesa mis bigotes."
   jump final
 
 label final:

@@ -11,7 +11,7 @@ label dia2:
   show pajaro dia with dissolve
   $ renpy.pause(2)
   
-  # agregar sonido hornero: play sound ["pajaro.mp3"] 
+
   
   g "¿Hoy es hoy o todavía es ayer? Ya ni siquiera me doy cuenta, cada día es una eternidad infinita."
   g "Humano ya no me mira... sigue atrapado por esa caja de luz, esa maldita luz..."
@@ -19,7 +19,8 @@ label dia2:
   g "Ffffss Fffssss ¿de dónde viene ese aroma viscoso y delicioso?"
   g "¡Creo que está arriba de la cama!"
 
-  #aparece la cuca
+  # Aparece la cuca
+  show cucaracha
   g "Ñaaaaaaami, ¡ya puedo saborearlo!"
   g "Aunque... pensándolo mejor. Podría cazarlo para Humano... y entonces me miraría a los ojos y diría con su alegre voz: \"¡Pat, esto es una masa! Sos increíble y genial\""
 
@@ -71,6 +72,9 @@ label ofrenda:
 label teclado:
   g "El primer salto es fácil, lo conozco de memoria."
   g "Cuando llego a las piernas de Humano, vuelvo a saltar y finalmente me acurruco sobre el escritorio, tapando con mi cuerpo la caja de luz."
+  
+  hide Patricia
+  show teclado gato
   g "La caja de luz es sorprendentemente cómoda.. ejem digo... ¡¡¡LA ODIO CON TODO EL MEEEEOOOOWWW!!!"
   g "Ahora que estoy arriba, giro la cabeza buscando la mirada de Humano."
 
@@ -82,6 +86,7 @@ label teclado:
   show habitacion base noche with dissolve
   hide humano sentado tarde
   show humano sentado noche
+  hide pajaro tarde
   play sound ["meow_begging.mp3"]
   g "¿A dónde vas Humano? Estás acá... pero no estás."
   jump finDia2
