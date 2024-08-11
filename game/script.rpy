@@ -1,6 +1,6 @@
 ﻿# Personajes
 define g = Character("Patricia", color="#926a54")
-define h = Character("Norberto", color="#28abe7")
+define h = Character("Humano", color="#28abe7")
 
 # Habitacion
 image habitacion humano = "bg/fondo_base_dia_con_humano.png"

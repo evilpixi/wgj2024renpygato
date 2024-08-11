@@ -1,7 +1,12 @@
 label dia1:
-  "DIA 1"
+  show text "DIA 1"
+  pause
+
+  scene habitacion base dia with dissolve
 
   play sound ["stomach.mp3"] 
+  show Patricia at left
+
   g "Pppprrrrrrr! Pppppprrrrr! Oouh creo que la cena de ayer no me cayó nada bien. Tal vez podría masticar algunas hojitas.. Mmmmm ¡Humano odia que haga eso!"
   $ renpy.pause(1)
 
@@ -16,8 +21,6 @@ label dia1:
   g "Podría jugar un rato con esa serpiente de papel... ¡y a Humano no le quedaría otra que salir a comprar más!" 
   g "Chau silla, chau caja de luz odiosa. Pero.. ¿cuál es la mejor forma de hacer que Humano se levante?"
 
-  # aqui habría que poner la intro de las decisiones
-
   menu:
     "Masticar hojitas ñam ñam":
       $ aciertos += 1
@@ -26,7 +29,6 @@ label dia1:
     "Jugar con la serpiente de papel":
       $ aciertos += 0
       jump papel
-
 
 label plantas:
   play sound ["meow_annoyed.mp3"]
@@ -69,5 +71,6 @@ label papel:
 
 # aqui se juntan ambas opciones y se va al día 2
 label finDia1:
-  "FIN DEL DIA 1"
+  scene black with dissolve
+
   jump dia2

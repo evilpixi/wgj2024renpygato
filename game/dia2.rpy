@@ -1,5 +1,8 @@
 label dia2:
-  "DIA 2"
+  show text "DIA 2"
+  pause
+  
+  scene habitacion base dia with dissolve
   
   g "¿Hoy es hoy o todavía es ayer? Ya ni siquiera me doy cuenta, cada día es una eternidad infinita."
   g "Humano ya no me mira... sigue atrapado por esa caja de luz, esa maldita luz..."
@@ -57,5 +60,6 @@ label teclado:
   jump finDia2
 
 label finDia2:
-  "FIN DEL DIA 2"
+  scene black with dissolve
+  
   jump dia3

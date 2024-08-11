@@ -1,5 +1,8 @@
 label dia3:
-  "DIA 3"
+  show text "DIA 3"
+  pause
+
+  scene habitacion base dia with dissolve
 
   g "Abro los ojos y bostezo. Otra vez todo es igual... no me sorprende."
   g "Humano sentado enfrente de la caja maldita, la comida sin gusto a nada y ese pájaro que todos los días se queda mirándome desde la ventana..."
@@ -66,7 +69,9 @@ label caja:
   jump final
 
 label final:
-  if aciertos >= 2:
-    jump final_bueno
-  else:
-    jump final_malo
+  scene black with dissolve
+  show text "FIN"
+  pause
+
+  "Gracias por jugar."
+  return
