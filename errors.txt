@@ -2,17 +2,9 @@
 errors listed below, and try again.
 
 
-The label mimos is defined twice, at File "game/dia1.rpy", line 15:
-label mimos:
-and File "game/script.rpy", line 47:
-label mimos:
-
-
-The label taza is defined twice, at File "game/dia1.rpy", line 20:
-label taza:
-and File "game/script.rpy", line 65:
-label taza:
-
+File "game/script.rpy", line 35: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
+    show Patricia_dialogo at left
+    ^
 
 Ren'Py Version: Ren'Py 8.2.3.24061702
-Sat Aug 10 19:27:51 2024
+Sun Aug 11 01:55:22 2024
