@@ -1,13 +1,14 @@
 label dia3:
-  "DIA 3"
+  scene black with dissolve
+  show text "DIA 3"
+  pause
 
   scene habitacion base dia 
-  show Patricia at truecenter
+  show Patricia at Position(xpos=1580, ypos=700)with dissolve
   show humano sentado dia
   show caja dia
-
-  $ renpy.pause(2)
-  show pajaro dia with dissolve
+  show pajaro dia
+  show papel roto dia
   $ renpy.pause(2)
   
 
@@ -29,8 +30,11 @@ label dia3:
   show habitacion base tarde with dissolve
   hide humano sentado dia
   show humano sentado tarde
+  hide papel roto dia
+  show papel roto tarde
   hide pajaro dia
   show pajaro tarde
+
   menu:
     "Preguntarle la posta al pájaro":
       $ aciertos += 0

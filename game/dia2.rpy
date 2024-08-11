@@ -27,7 +27,7 @@ label dia2:
   g "Humano ya no me mira... sigue atrapado por esa caja de luz, esa maldita luz..."
 
   g "Ffffss Fffssss ¿de dónde viene ese aroma viscoso y delicioso?"
-  g "¡Creo que está arriba de la cama!"
+  g "¡Mira lo que apareció en la cama!"
 
   # Aparece la cuca
   show cucaracha
@@ -37,8 +37,6 @@ label dia2:
   g "Aunque también podría sentarme sobre la caja de luz y aplastar al fin ese meteorito incandescente."
   g "Me quedaría cerquita suyo, tan cerca y a oscuras..." 
   g "Meeooooww si tan sólo pudiera mirarlo una vez más..."
-  g "¡lo que daría por mirarlo a los ojos una vez más!"
-  g "Me quedaría cerquita suyo, tan cerca y a oscuras..." 
 
   # Cambio iluminación -> Tarde
   show habitacion base tarde with dissolve
@@ -109,14 +107,16 @@ label ofrenda:
 
 label teclado:
   g "El primer salto es fácil, lo conozco de memoria."
-
   hide Patricia with dissolve
+  show Patricia at Position(xpos=600, ypos=460)with dissolve
+  hide cucaracha with dissolve
+  
+  
+  g "Cuando llego a las piernas de Humano, vuelvo a saltar y finalmente me acurruco sobre el escritorio, tapando con mi cuerpo la caja de luz."
+  hide Patricia
   show teclado gato with dissolve
 
-  g "Cuando llego a las piernas de Humano, vuelvo a saltar y finalmente me acurruco sobre el escritorio, tapando con mi cuerpo la caja de luz."
-  
-  hide Patricia
-  show teclado gato
+
   g "La caja de luz es sorprendentemente cómoda.. ejem digo... ¡¡¡LA ODIO CON TODO EL MEEEEOOOOWWW!!!"
   g "Ahora que estoy arriba, giro la cabeza buscando la mirada de Humano."
 
@@ -131,8 +131,6 @@ label teclado:
   show caja noche
   hide pajaro tarde
 
-  hide teclado gato
-  show Patricia at truecenter
 
   if comio_planta:
     show flores comidas noche

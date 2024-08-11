@@ -4,16 +4,16 @@ label dia1:
   pause
 
   scene habitacion base dia
-  show Patricia at truecenter
   show humano sentado dia
   show flores dia
+  show pajaro dia
   show papel dia
   show caja dia
 
   with dissolve
   
   play sound ["stomach.mp3"] 
-  show Patricia at left
+  show Patricia at right
 
   g "Pppprrrrrrr! Pppppprrrrr! Oouh creo que la cena de ayer no me cayó nada bien. Tal vez podría masticar algunas hojitas.. Mmmmm ¡Humano odia que haga eso!"
   $ renpy.pause(1)
