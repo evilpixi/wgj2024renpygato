@@ -1,5 +1,14 @@
+﻿# Personajes
 define g = Character("Patricia", color="#926a54")
 define h = Character("Norberto", color="#28abe7")
+
+# Habitacion
+image habitacion humano = "bg/fondo_base_dia_con_humano.png"
+image habitacion base dia = "bg/fondo_base_dia.png"
+image habitacion base noche = "bg/fondo_base_noche.png"
+
+# Objetos
+image caja dia = "bg/objetos/caja_dia.png"
 
 # la cantidad de 
 default aciertos = 0
@@ -12,11 +21,11 @@ image Patricia:
 # Aquí comienza el juego
 label start:
     
-    scene fondo_base_dia
+    scene habitacion base dia
     $ renpy.pause(3)
     
 
-    show fondo_base_dia_con_humano
+    show habitacion humano
     with dissolve
     $ renpy.pause(2)
     
