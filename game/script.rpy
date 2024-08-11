@@ -31,6 +31,7 @@ define musica_final_malo = "audio/music/badend_music.wav"
 
 # Objetos
 image caja dia = "bg/objetos/caja_dia.png"
+image caja tarde = "bg/objetos/caja_tarde.png"
 image caja noche ="bg/objetos/caja_noche.png"
 image flores dia = "bg/objetos/flores_dia.png"
 image flores tarde = "bg/objetos/flores_tarde.png"
@@ -39,7 +40,9 @@ image pajaro dia = "bg/objetos/pajaro_dia.png"
 image pajaro tarde = "bg/objetos/pajaro_tarde.png"
 image red tarde = "bg/objetos/red_tarde.png"
 image red noche = "bg/objetos/red_noche.png"
-image papel = "bg/objetos/papel.png"
+image papel dia = "bg/objetos/papel_dia.png"
+image papel tarde = "bg/objetos/papel_tarde.png"
+image papel noche = "bg/objetos/papel_noche.png"
 image celular = "bg/objetos/celular.png"
 
 # Sucesos
@@ -48,14 +51,23 @@ image celular roto = "bg/sucesos/celular.png"
 image cucaracha = "bg/sucesos/cucaracha.png"
 image flores comidas dia = "bg/objetos/flores_comidas_dia.png"
 image flores comidas tarde = "bg/objetos/flores_comidas_tarde.png"
-image flores comidas noche = "bg/suceobjetossos/flores_comidas_noche.png"
-image papel roto = "bg/sucesos/papel.png"
+image flores comidas noche = "bg/objetos/flores_comidas_noche.png"
+image papel roto dia = "bg/objetos/papel_roto_dia.png"
+image papel roto tarde = "bg/objetos/papel_roto_tarde.png"
+image papel roto noche = "bg/objetos/papel_roto_noche.png"
 image teclado gato = "bg/sucesos/teclado_gato.png"
 
 
 
-# la cantidad de 
+# variables
 default aciertos = 0
+
+default comio_planta = False
+default rompio_papel = False
+default ofrecio_cucaracha = False
+default aplasto_teclado = False
+default pregunto_pajaro = False
+default jugo_caja = False
 
 image Patricia:
     "gato"

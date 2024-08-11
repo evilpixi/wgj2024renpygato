@@ -1,4 +1,5 @@
 label dia1:
+  scene black with dissolve
   show text "DIA 1"
   pause
 
@@ -9,13 +10,10 @@ label dia1:
   show papel
   show caja dia
 
-  $ renpy.pause(2)
-  show pajaro dia with dissolve
-  $ renpy.pause(2)
+  with dissolve
   
   # agregar sonido hornero: play sound ["pajaro.mp3"] 
-  play sound ["stomach.mp3"] 
-  show Patricia at left
+  play sound ["stomach.mp3"]
 
   g "Pppprrrrrrr! Pppppprrrrr! Oouh creo que la cena de ayer no me cayó nada bien. Tal vez podría masticar algunas hojitas.. Mmmmm ¡Humano odia que haga eso!"
   $ renpy.pause(1)
@@ -32,21 +30,23 @@ label dia1:
   g "Chau silla, chau caja de luz odiosa. Pero.. ¿cuál es la mejor forma de hacer que Humano se levante?"
 
   # Cambio iluminación -> Tarde
-  show habitacion base tarde with dissolve
-  hide humano sentado dia
+  show habitacion base tarde
   show humano sentado tarde
-  hide pajaro dia
   show pajaro tarde
-  hide flores dia
+  show papel tarde
   show flores tarde
+
+  with dissolve
 
   menu:
     "Masticar hojitas ñam ñam":
       $ aciertos += 1
+      $ comio_planta = True
       jump plantas
 
     "Jugar con la serpiente de papel":
       $ aciertos += 0
+      $ rompio_papel = True
       jump papel
 
 label plantas:
@@ -57,7 +57,6 @@ label plantas:
   
 
   # Planta rota
-  hide flores tarde
   show flores comidas tarde 
 
   # Humano la mira
@@ -77,9 +76,11 @@ label plantas:
   show habitacion base noche with dissolve
   hide humano girado tarde
   show humano sentado noche
-  hide caja dia
   show caja noche
-  hide pajaro tarde
+  hide pajaro tarde with dissolve
+  show flores comidas noche
+  show papel noche
+
   play sound ["meow_sad.mp3"]
   g "Cuando se sienta ahí, se olvida de todo. Nada de sol, nada de terraza. ¿Y ahora qué?"
   jump finDia1
@@ -89,7 +90,7 @@ label papel:
   play sound ["meow_purr.mp3", "toilet_paper.mp3"]
   g "Meeeeeowwwwwiiii ¡me había olvidado lo divertido que era jugar con la serpiente de papel!"
   hide papel
-  show papel roto
+  show papel roto tarde
   g "¡Tengo que seguir haciéndolo todas mis vidas!"
   $ renpy.pause(1)
   
@@ -107,6 +108,11 @@ label papel:
   show habitacion base noche with dissolve
   hide humano de pie
   show humano sentado noche
+  show caja noche
+  hide pajaro tarde with dissolve
+  show flores noche
+  show papel roto noche
+  
   play sound ["meow_sad.mp3"]
   g "¿No vamos a salir a la plaza nunca más?"
   jump finDia1
