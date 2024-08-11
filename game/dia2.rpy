@@ -3,6 +3,7 @@ label dia2:
   pause
   
   scene habitacion base dia with dissolve
+  show Patricia at truecenter
   show humano sentado dia
   show caja dia
 

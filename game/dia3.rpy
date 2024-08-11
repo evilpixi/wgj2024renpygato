@@ -2,6 +2,7 @@ label dia3:
   "DIA 3"
 
   scene habitacion base dia 
+  show Patricia at truecenter
   show humano sentado dia
   show caja dia
 
@@ -48,22 +49,47 @@ label ventana:
   g "Saludo al pájaro - Meeeowwwlaa!- mientras el olor a verano despeina mis bigotes. Él se acerca y yo siento como si estuviera sosteniendo un secreto con el pico, sólo para mí."
   g "Cuando está a punto de abrir el pico, saludarme o tal vez soltar el secreto... escucho un grito de terror que me pone los pelos de punta...."
 
+  # Humano la mira
+  hide humano sentado tarde 
+  show humano girado tarde
+
   h "¡¿¡PATRICIA QUÉ HACES!?! ¡BAJATE DE AHÍ!"
 
   g "Humano al fin me mira... pero está asustado y nervioso."
   g "Quiero explicarle que estoy bien, quiero hablarle del secreto del pájaro, pero me agarra con las manos temblorosas y cierra la ventana con un golpe seco."
   
-  play sound ["window.mp3"]
+  # Humano vuelve a mirar en frente
+  hide pajaro tarde
+  hide humano girado tarde
+  show humano sentado tarde 
+
 
   # Aparece reja ventana
+  $ renpy.pause(2) 
 
+  show red tarde
+
+
+  # quité el sonido de la ventana, no tenemos ventana cerrada de tarde: play sound ["window.mp3"] -> acomodar narrativa?
+
+  $ renpy.pause(2) 
   # Cambio iluminación -> Noche
   show habitacion base noche with dissolve
+  hide red tarde
+  show red noche
   hide humano sentado tarde
   show humano sentado noche
   hide caja dia
   show caja noche
-  hide pajaro tarde
+  hide red tarde
+  show red noche
+
+
+  # Aparece reja ventana
+  $ renpy.pause(2) 
+  hide red tarde
+  show red noche
+
   play sound ["meow_begging.mp3"]
   g "Los días siguen siendo iguales.. Humano sentado en su escritorio, la comida sin sabor."
   g "Pero ahora la ventana tiene rejas y yo observo, desde mi pequeña jaula."

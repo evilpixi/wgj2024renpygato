@@ -3,8 +3,9 @@ label dia1:
   pause
 
   scene habitacion base dia
+  show Patricia at truecenter
   show humano sentado dia
-  show flor dia
+  show flores dia
   show papel
   show caja dia
 
@@ -36,6 +37,8 @@ label dia1:
   show humano sentado tarde
   hide pajaro dia
   show pajaro tarde
+  hide flores dia
+  show flores tarde
 
   menu:
     "Masticar hojitas ñam ñam":
@@ -52,6 +55,11 @@ label plantas:
   g "No importa, todo sea para que se enoje y suba a la terraza. Puaaj puaaj, ¡Uaaacala!"
   $ renpy.pause(1)
   
+
+  # Planta rota
+  hide flores tarde
+  show flores comidas tarde 
+
   # Humano la mira
   hide humano sentado tarde 
   show humano girado tarde

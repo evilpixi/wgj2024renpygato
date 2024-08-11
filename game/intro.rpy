@@ -1,7 +1,7 @@
 label intro:
     scene habitacion base dia
     show humano sentado dia
-    show flor dia
+    show flores dia
     show papel
     show caja dia
     $ renpy.pause(2)
