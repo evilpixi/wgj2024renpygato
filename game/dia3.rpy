@@ -8,7 +8,18 @@ label dia3:
   show humano sentado dia
   show caja dia
   show pajaro dia
-  show papel roto dia
+  
+  
+  if comio_planta:
+    show flores comidas dia
+  else:
+    show flores dia
+
+  if rompio_papel:
+    show papel roto dia
+  else:
+    show papel dia
+    
   $ renpy.pause(2)
   
 
@@ -30,8 +41,17 @@ label dia3:
   show habitacion base tarde with dissolve
   hide humano sentado dia
   show humano sentado tarde
-  hide papel roto dia
-  show papel roto tarde
+  
+  if comio_planta: 
+    show flores comidas tarde
+  else:
+    show flores tarde
+
+  if rompio_papel:
+    show papel roto tarde
+  else:
+    show papel tarde
+
   hide pajaro dia
   show pajaro tarde
 
@@ -46,6 +66,7 @@ label dia3:
 
 label ventana:
   g "Decido confiar en el pájaro y sigo avanzando hacia la ventana, esquivando las cajas.."
+  show Patricia at Position(xpos=600, ypos=460)with dissolve
   g "Mientras trepo por el acolchado, siento el calor del sol acariciándome el lomo. Rayos de luz atraviesan la ventana y me envuelven en una calidez antigua, lejana y permanente."
   g "Desde la ventana veo la plaza: árboles frondosos y fuentes de agua, una nena con trenzas sostiene un barrilete naranja."
   
@@ -59,6 +80,7 @@ label ventana:
 
   h "¡¿¡PATRICIA QUÉ HACES!?! ¡BAJATE DE AHÍ!"
 
+  show Patricia at truecenter
   g "Humano al fin me mira... pero está asustado y nervioso."
   g "Quiero explicarle que estoy bien, quiero hablarle del secreto del pájaro, pero me agarra con las manos temblorosas y cierra la ventana con un golpe seco."
   
@@ -88,16 +110,25 @@ label ventana:
   hide red tarde
   show red noche
 
+  if comio_planta: 
+    show flores comidas noche
+  else:
+    show flores noche
+
+  if rompio_papel:
+    show papel roto noche
+  else:
+    show papel noche
 
   # Aparece reja ventana
   $ renpy.pause(2) 
   hide red tarde
   show red noche
 
+  $ renpy.pause(2) 
+  show final malo with dissolve
   play sound ["meow_begging.mp3"]
   g "Los días siguen siendo iguales.. Humano sentado en su escritorio, la comida sin sabor."
-  
-  show final malo with dissolve
   g "Pero ahora la ventana tiene rejas y yo observo, desde mi pequeña jaula."
   g "Al pájaro, nunca más lo volví a ver. Y cuando intento recordar los ojos de Humano, sólo puedo pensar en una luz brillante y dolorosa, como la luz de la caja."
   jump final

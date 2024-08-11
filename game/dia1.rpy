@@ -53,13 +53,15 @@ label dia1:
 
 label plantas:
   play sound ["meow_annoyed.mp3"]
+  show Patricia at Position(xpos=650, ypos=460)with dissolve
   g "Puajj estas hojas no estaban tan ricas como creí. ¿Hace cuánto no las riega?"
+  show flores comidas tarde 
   g "No importa, todo sea para que se enoje y suba a la terraza. Puaaj puaaj, ¡Uaaacala!"
   $ renpy.pause(1)
   
 
   # Planta rota
-  show flores comidas tarde 
+  
 
   # Humano la mira
   hide humano sentado tarde 
