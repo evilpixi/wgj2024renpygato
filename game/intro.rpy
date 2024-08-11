@@ -1,5 +1,6 @@
 label intro:
     scene habitacion base dia with dissolve
+    play music musica_fondo
     $ renpy.pause(3)
     
 

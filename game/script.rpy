@@ -7,6 +7,11 @@ image habitacion humano = "bg/fondo_base_dia_con_humano.png"
 image habitacion base dia = "bg/fondo_base_dia.png"
 image habitacion base noche = "bg/fondo_base_noche.png"
 
+# Musica
+define musica_fondo = "audio/music/bgmusic.wav"
+define musica_final_bueno = "audio/music/goodend_music.wav"
+define musica_final_malo = "audio/music/badend_music.wav"
+
 # Objetos
 image caja dia = "bg/objetos/caja_dia.png"
 image caja noche ="bg/objetos/caja_noche.png"
