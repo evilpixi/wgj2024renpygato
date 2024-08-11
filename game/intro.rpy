@@ -1,10 +1,9 @@
 label intro:
-    scene habitacion base dia with dissolve
-    $ renpy.pause(3)
-    
-
-    show habitacion humano
-    with dissolve
+    scene habitacion base dia
+    show humano sentado dia
+    show flor dia
+    show papel
+    show caja dia
     $ renpy.pause(2)
     
     show Patricia at truecenter
@@ -13,8 +12,6 @@ label intro:
 
     # Aquí iría la introducción
     g "Desde que llegó esa caja de luz a la casa, todos los días parecen iguales..."
-
-    show flor dia at Position(xpos=600, ypos=600)
     
     play sound ["meow_attention.mp3"]
     g "¿Estará bien? No parece estar bien. Me gustaría que se diera vuelta y me acariciara como antes."
@@ -25,7 +22,5 @@ label intro:
     g "Esa caja de luz.. lo hipnotiza y le hace olvidar el tiempo."
     g "¿Qué hago para que se levante de la silla? Tengo que investigar... tal vez así Humano vuelva a sonreír."
     $ renpy.pause(2)
-
-    scene black with dissolve
 
     jump dia1
