@@ -10,10 +10,21 @@ image habitacion base noche = "bg/fondo_base_noche.png"
 # Objetos
 image caja dia = "bg/objetos/caja_dia.png"
 image caja noche ="bg/objetos/caja_noche.png"
-image flores dia = "bg/objetos/flores_dia.png"
-image flores noche = "bg/objetos/flores_noche.png"
+image flor dia = "bg/objetos/flores_dia.png"
+image flor noche = "bg/objetos/flores_noche.png"
 image pajaro = "bg/objetos/pajaro.png"
 image papel = "bg/objetos/papel.png"
+image celular = "bg/objetos/celular.png"
+
+# Sucesos
+image caja gato = "bg/sucesos/cajaa_gato.png"
+image celular roto = "bg/sucesos/celular.png"
+image cucaracha = "bg/sucesos/cucaracha.png"
+image flor rota dia = "bg/sucesos/flor_dia.png"
+image flor rota noche = "bg/sucesos/flor_noche.png"
+image papel roto = "bg/sucesos/papel.png"
+image teclado gato = "bg/sucesos/teclado_gato.png"
+
 
 
 # la cantidad de 
@@ -26,88 +37,4 @@ image Patricia:
 
 # Aquí comienza el juego
 label start:
-    
-    scene habitacion base dia
-    $ renpy.pause(3)
-    
-
-    show habitacion humano
-    with dissolve
-    $ renpy.pause(2)
-    
-    show Patricia at truecenter
-    with dissolve
-    $ renpy.pause(3)
-
-    # Aquí iría la introducción
-    g "Desde que llegó esa caja de luz a la casa, todos los días parecen iguales..."
-    g "¿Estará bien? No parece estar bien. Me gustaría que se diera vuelta y me acariciara como antes."
-    g "Ahora casi ni se mueve..."
-    g "Sólo se levanta para ir a su caja de agua.. o para buscar comida."
-    $ renpy.pause(2)
-
-    g "Esa caja de luz.. lo hipnotiza y le hace olvidar el tiempo."
-    g "¿Qué hago para que se levante de la silla? Tengo que investigar... tal vez así Humano vuelva a sonreír."
-    $ renpy.pause(2)
-
-    jump dia1
-
-    "este es un cambio de pixi :)"
-    "pixi"
-    "Pixi invita la cena ;)"
-    "pan"
-    "Una gata en una habitación con un humano muy ocupado..."
-
-    play music "Sonder.mp3"
-
-    
-    show Gata at left
-    with dissolve
-
-    g "Qué humano más aburrido..."
-    h "mmmh..."
-
-    "Cómo llamarle la atención?"
-
-    menu:
-        "Pedir mimos":
-            jump mimos
-
-        "Empujar taza":
-            jump taza
-
-# opción A y Bad Ending
-label mimos:
-    play sound ["meow.mp3", "Purr.mp3"]
-
-    show Gata at right
-    with dissolve
-
-    $ renpy.pause(3)
-
-    h "salí de acá! Ahora no...!"
-
-    scene photo_album
-    with dissolve
-
-    $ renpy.pause(5)
-    return
-
-
-# Opción B y Good Ending
-label taza:
-    hide Gata   
-    h "No empujes la taza..."
-    h "..."
-    h "Te dije que no!"
-
-    play sound "mug.mp3"
-
-    $ renpy.pause(1)
-    h "\*\!\%\§\!"
-
-    scene room_bad_ending
-    with dissolve
-
-    $ renpy.pause(5)
-    return
+    jump intro
