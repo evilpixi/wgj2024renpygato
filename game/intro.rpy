@@ -1,5 +1,4 @@
 label intro:
-    jump dia2
     scene black
     pause 0.2
 

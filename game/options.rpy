@@ -49,7 +49,7 @@ define build.name = "WGJ2024"
 define config.has_sound = True
 define config.has_music = True
 define config.has_voice = True
-define config.main_menu_music = "audio/music/mainmenu_music.mp3"
+define config.main_menu_music = "audio/music/for_patricia.wav"
 
 
 ## To allow the user to play a test sound on the sound or voice channel,

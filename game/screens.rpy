@@ -353,7 +353,9 @@ screen main_menu():
     ## This ensures that any other menu screen is replaced.
     tag menu
 
-    add gui.main_menu_background
+    add Movie(size=(config.screen_width, config.screen_height), play="videos/vid_menu_juego.mpg", loop=True)
+    on "hide" action Stop("movie")
+    # add gui.main_menu_background
 
     ## This empty frame darkens the main menu.
     frame:
