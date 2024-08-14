@@ -27,11 +27,20 @@ image papel tarde = "bg/objetos/papel_tarde.png"
 image papel noche = "bg/objetos/papel_noche.png"
 image celular = "bg/objetos/celular.png"
 
+#Botones
+image flores boton = "bg/botones/planta_dia_boton.png"
+image papel boton = "bg/botones/papel_dia_boton.png"
+image cucaracha boton = "bg/botones/cucaracha_boton.png"
+image teclado boton = "bg/botones/teclado_boton.png"
+image pajaro boton = "bg/botones/teclado_boton.png"
+image caja boton = "bg/botones/caja_dia_boton.png"
+
 # Sucesos
 image caja gato dia = "bg/objetos/caja_gato_dia.png"
 image caja gato tarde = "bg/objetos/caja_gato_tarde.png"
 image caja gato noche = "bg/objetos/caja_gato_noche.png"
 image cucaracha = "bg/objetos/cucaracha.png"
+image cucaracha gato dia = "bg/objetos/cucaracha_gato_dia.png"
 image flores comidas dia = "bg/objetos/flores_comidas_dia.png"
 image flores comidas tarde = "bg/objetos/flores_comidas_tarde.png"
 image flores comidas noche = "bg/objetos/flores_comidas_noche.png"
@@ -41,6 +50,7 @@ image papel roto noche = "bg/objetos/papel_roto_noche.png"
 image teclado gato = "bg/objetos/teclado_gato.png"
 image red tarde = "bg/objetos/red_tarde.png"
 image red noche = "bg/objetos/red_noche.png"
+image rasguñar gato dia = "bg/objetos/rasguñar_gato_dia.png"
 
 # Gato escena
 image gato neutro = "character/gato/gato_neutro.png"
