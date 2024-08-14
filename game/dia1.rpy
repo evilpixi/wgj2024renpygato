@@ -1,4 +1,5 @@
 label dia1:
+  hide Patricia onlayer top
   scene black with dissolve
   show text "DIA 1"
   pause
@@ -15,12 +16,16 @@ label dia1:
   
   # Sonido panza
   play sound ["stomach.mp3"] 
-
+  show Patricia asco onlayer top
   g "Pppprrrrrrr! Pppppprrrrr! Oouh creo que la cena de ayer no me cayó nada bien. Tal vez podría masticar algunas hojitas.. Mmmmm ¡Humano odia que haga eso!"
+  
+  show Patricia onlayer top
   g "Ya sé! Si hago eso se va a enojar y va a llevar la planta a la terraza otra vez. En la terraza hay sol y aire..."
   g "Se va a acordar de lo lindo que es estar afuera. ¡Ya no va a estar sentado ni enojado!"
+  show Patricia onlayer top
   g "Mmm aunque.. tal vez es mejor hacerlo salir afuera de verdad." 
   g "¿Y si arruino su caja de baño? Sé que prometí no volver a hacerlo pero... ¡es tan divertido!"
+  show Patricia contenta onlayer top
   g "Podría jugar un rato con esa serpiente de papel... ¡y a Humano no le quedaría otra que salir a comprar más!" 
   g "Chau silla, chau caja de luz odiosa. Pero.. ¿cuál es la mejor forma de hacer que Humano se levante?"
 
@@ -32,7 +37,7 @@ label dia1:
   show papel tarde
   show flores tarde
   show papel tarde
-
+  hide Patricia onlayer top
   with dissolve
 
   # Opciones Dia 1
@@ -59,6 +64,7 @@ label plantas:
   $ renpy.pause(1)
   show flores comidas tarde
   $ renpy.pause(3)
+  show Patricia asco onlayer top
   g "Puajj estas hojas no estaban tan ricas como creí. ¿Hace cuánto no las riega?"
   g "No importa, todo sea para que se enoje y suba a la terraza. Puaaj puaaj, ¡Uaaacala!"
   $ renpy.pause(1)
@@ -66,25 +72,27 @@ label plantas:
 
   # Humano la mira
   show humano girado tarde
+  show Patricia onlayer top
   g "Mientras termino de masticar estas hojas rancias, Humano parece escucharme y gira la cabeza...  Primero observa a la maltrecha plantita y después a mí."
   $ renpy.pause(1)
 
+  show Humano contento onlayer top
   h "Nunca creí que iba a decir esto Pat pero..."
 
   # Patricia lo mira, contenta
-  show gato boca abierta:
+  show gato boca abierta flip:
     xpos 620
     ypos 360
     zoom 0.2
-    xzoom -1
+  
   h "...hiciste bien en morder esas hojas, ¡esta planta necesitaba una poda! Y yo últimamente no tengo tiempo ni ganas de nada..."
+  hide Humano onlayer top
   $ renpy.pause(1)
   
   # Humano vuelve a mirar la caja de luz
   show humano sentado tarde
+  show Patricia enojada onlayer top
   g "¡Tanto mordisquear para nada! La caja de luz volvió a atrapar a Humano." 
-  g "Cuando se sienta ahí, se olvida de todo. Nada de sol, nada de terraza. ¿Y ahora qué?" 
-
 
   # Cambio iluminación -> Noche
   show humano sentado noche
@@ -92,14 +100,17 @@ label plantas:
   show flores comidas noche
   show papel noche
   hide pajaro tarde
+  hide Patricia onlayer top
   show gato bolita:
     xpos 780
     ypos 620
     zoom 0.9
   show habitacion base noche with dissolve
 
-  play sound ["meow_sad.mp3"]
+  $ renpy.pause(2)
+  show Patricia triste onlayer top
   g "Cuando se sienta ahí, se olvida de todo. Nada de sol, nada de terraza. ¿Y ahora qué?"
+  play sound ["meow_sad.mp3"]
   jump finDia1
 
 
@@ -110,6 +121,8 @@ label papel:
     xpos 1800
     ypos 900
   play sound ["toilet_paper.mp3"]
+
+  show Patricia contenta onlayer top
   g "Meeeeeowwwwwiiii ¡me había olvidado lo divertido que era jugar con la serpiente de papel!"
   play sound ["meow_purr.mp3"]
   
@@ -118,11 +131,10 @@ label papel:
   show humano girado tarde
 
   # Patricia toda contenta
-  show gato boca abierta:
-    xpos 1300
-    ypos 800
+  show gato boca abierta flip:
+    xpos 1550
+    ypos 590
     zoom 0.2
-    xzoom -1
   
   g "¡Tengo que seguir haciéndolo todas mis vidas!"
   $ renpy.pause(1)
@@ -131,11 +143,17 @@ label papel:
   show humano de pie
   g "Mientras araño el papel y lo convierto en tiritas, Humano se acerca a mí."
   g "Me observa primero a mí y después a la gran piel de serpiente blanca desparramada en el piso de madera."
+  show Patricia enojada onlayer top
+  show gato flip:
+    xpos 1550
+    ypos 590
+    zoom 0.2
   g "Pero ¡ni siquiera le importa! Tiene un caja gigante llena de serpientes de papel guardadas..."
   $ renpy.pause(2)
 
   # Se vuelve a sentar el humano
   show humano sentado tarde
+  show Patricia triste onlayer top
   g "Ahora que vuelve a sentarse frente a la caja de luz...." 
   g "No sé.. la diversión se apagó y una serpiente de tristeza se retuerce adentro mío."
 

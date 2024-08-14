@@ -1,4 +1,5 @@
 label dia3:
+  hide Patricia onlayer top with dissolve
   scene black with dissolve
   show text "DIA 3"
   pause
@@ -7,43 +8,53 @@ label dia3:
   show humano sentado dia
   show caja dia at Position(xpos=1580, ypos=680)
   show pajaro dia
-  show gato neutro:
+  show gato flip:
     xpos 1520
     ypos 490
     zoom 0.2
-    xzoom -1
-  
   
   if comio_planta:
-    show flores comidas dia
+    show flores comidas dia behind gato
   else:
-    show flores dia
+    show flores dia behind gato
 
   if rompio_papel:
-    show papel roto dia
+    show papel roto dia behind gato
   else:
-    show papel dia
+    show papel dia behind gato
     
   $ renpy.pause(2)
   
-
+  show Patricia onlayer top
   g "Abro los ojos y bostezo. Otra vez todo es igual... no me sorprende."
+  show Patricia triste onlayer top
   g "Humano sentado enfrente de la caja maldita, la comida sin gusto a nada y ese pájaro que todos los días se queda mirándome desde la ventana..."
   
   
   play sound ["hornero.mp3"]
+  show Patricia onlayer top
+  show gato flip:
+    xpos 700
+    ypos 500
+    zoom 0.2
   g "¿por qué me mira, qué quiere?"
+  show Patricia enojada onlayer top
   g "Ya fue, me cansé. Necesito que algo cambie, ¡lo necesito desesperadamente!"
+  show Patricia onlayer top
   g "Si no hay nada que yo pueda hacer, tal vez.. tal vez el pájaro sea la respuesta."
+  show Patricia onlayer top
   g "Me acerco despacio a la ventana, pero en el camino mi suave cola marroncita roza una de las cajas de cartón.."
+  show Patricia contenta onlayer top
   g "¡qué sensación increíble! Se siente casi.. casi como una caricia."
   
-  # Patricia se mueve AUN DEFINIR A DONDE CON LA NARRATIVA
+  # Patricia se mueve
+  show Patricia onlayer top
   g "¿Qué voy a hacer? ¿El pájaro realmente va a ayudarme a despertar a Humano?"
   g "¿Y si me rindiera? Humano no va a dejar su caja de luz..."
   g "¿Qué pasaría si eligiera quedarme entre las cajas... si eligiera la caricia del cartón?"
   
   # Cambio iluminación -> Tarde
+  hide Patricia onlayer top with dissolve
   show habitacion base tarde with dissolve
   hide humano sentado dia
   show humano sentado tarde
@@ -72,6 +83,7 @@ label dia3:
 
 # Opcion pajaro
 label ventana:
+  show Patricia onlayer top
   g "Decido confiar en el pájaro y sigo avanzando hacia la ventana, esquivando las cajas.."
  
   # Patricia se mueve al lado del pájaro y lo mira
@@ -84,12 +96,15 @@ label ventana:
   g "Desde la ventana veo la plaza: árboles frondosos y fuentes de agua, una nena con trenzas sostiene un barrilete naranja."
   
   play sound ["meow_far.mp3"]
+  show Patricia contenta onlayer top
   g "Saludo al pájaro - Meeeowwwlaa!- mientras el olor a verano despeina mis bigotes. Él se acerca y yo siento como si estuviera sosteniendo un secreto con el pico, sólo para mí."
+  show Patricia onlayer top
   g "Cuando está a punto de abrir el pico, saludarme o tal vez soltar el secreto... escucho un grito de terror que me pone los pelos de punta...."
 
   # Humano la mira
   show humano girado tarde
-
+  show Patricia asco onlayer top
+  show Humano enojado onlayer top
   h "¡¿¡PATRICIA QUÉ HACES!?! ¡BAJATE DE AHÍ!"
 
   # Patricia se vuelve a la cama
@@ -98,21 +113,20 @@ label ventana:
     ypos 500
     zoom 0.2
 
+  hide Humano onlayer top
   g "Humano al fin me mira... pero está asustado y nervioso."
+  show Patricia triste onlayer top
   g "Quiero explicarle que estoy bien, quiero hablarle del secreto del pájaro, pero me agarra con las manos temblorosas y me aleja de la ventana."
   
   # Humano vuelve a mirar en frente
+  hide Patricia onlayer top with dissolve
   hide pajaro tarde
   show humano sentado tarde 
-
 
   # Aparece reja ventana
   $ renpy.pause(2) 
 
   show red tarde behind flores
-
-
-  # QUITE EL SONIDO DE LA REJA: play sound ["window.mp3"] -> acomodar narrativa?
 
   $ renpy.pause(2)
   # Cambio iluminación -> Noche
@@ -132,7 +146,6 @@ label ventana:
   show red noche behind flores
   show habitacion base noche with dissolve
 
-
   # Aparece reja ventana
   $ renpy.pause(2) 
   show red noche
@@ -149,7 +162,14 @@ label ventana:
 
 # Opcion caja
 label caja:
+  show gato flip:
+    xpos 1520
+    ypos 490
+    zoom 0.2
+
+  show Patricia onlayer top
   g "El pájaro puede esperar, pero ¡esa caja! Es irresistible..."
+  show Patricia contenta onlayer top
   g "Me froto contra ella, una y otra vez, aprovechando su filosas superficies."
   
   # Patricia se mete en la caja
@@ -159,25 +179,34 @@ label caja:
 
   # Humano la mira
   show humano girado tarde
+  show Patricia onlayer top
   g "Desde esta oscuridad de cartón... el mundo da menos miedo."
   
   # Humano se levanta y la mira
   show humano de pie at Position(xpos=1000)
   g "De repente, siento un calor conocido."
   g "Una voz me abraza, mientras me sostiene la ternura de una caricia que creí que nunca más iba a volver a sentir..."
+  show Patricia contenta onlayer top
   g "¡Son sus manos! Firmes, cálidas y seguras."
+  show Patricia onlayer top
   g "Mientras jugaba con las cajas, Humano me había estado observando..." 
   g "...se había levantado de la silla y alejado de su caja de luz..  ya sin luz."
 
+  show Humano neutro onlayer top
   h "Creo que ya pasó demasiado tiempo, ¿no Pat?"
 
+  show Patricia onlayer top
   g "Sonreía por primera vez en mucho tiempo.. sonreía y lloraba.." 
   g "¡qué Humano tan extraño! Pero no lo cambiaría por ningún pájaro, ninguna caja de cartón o de luz."
+  show Patricia contenta onlayer top
   g "Era mi Humano y hoy al fin había vuelto."
 
+  show Humano contento onlayer top
   h "Es hora de salir afuera Pat, ¿vamos a la plaza?"
   
   # SFX puerta, pasos, pajaritos
+  hide Humano onlayer top
+  hide Patricia onlayer top
   hide humano sentado tarde with dissolve
   hide caja gato tarde with dissolve
   play sound ["door.mp3", "footsteps.mp3"]
@@ -186,13 +215,10 @@ label caja:
   show final bueno with dissolve
   
   $ renpy.pause(4) 
-  play sound ["Purr_short.mp3"]
+  play sound ["Purr_short.mp3"] fadeout 1
   g "Ppppprprrrrrr Prrrprprrrrrrr, yo ronroneo." 
 
-  
-  play sound ["outside.mp3"]
-
-  
+  play sound ["outside.mp3"] fadein 3
   
   g "Mientras tanto, la brisa del verano atraviesa mis bigotes."
   jump final

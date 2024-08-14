@@ -44,26 +44,58 @@ image red noche = "bg/objetos/red_noche.png"
 
 # Gato escena
 image gato neutro = "character/gato/gato_neutro.png"
+image gato flip = "character/gato/gato_neutro_flip.png"
 image gato espalda dia = "character/gato/gato_espalda_dia.png"
 image gato espalda noche = "character/gato/gato_espalda_noche.png"
 image gato girado = "character/gato/gato_girado.png"
-image gato flip = "character/gato/gato_neutro_flip.png"
 image gato mirada abajo = "character/gato/gato_mirada_abajo.png"
-image gato boca abierta = "character/gato/gato_abierta.png"
+image gato mirada abajo flip = "character/gato/gato_mirada_abajo_flip.png"
+image gato boca abierta flip = "character/gato/gato_abierta_flip.png"
 image gato bolita = "character/gato/gato_bolita.png"
 
 # Gato narrativa
-image patricia = "character/narrativa/gato/patricia_normal.png"
-image patricia asco = "character/narrativa/gato/patricia_asco.png"
-image patricia pregunta = "character/narrativa/gato/patricia_pregunta.png"
-image patricia triste = "character/narrativa/gato/patricia_triste.png"
-image patricia enojada = "character/narrativa/gato/patricia_enojada.png"
+image Patricia:
+    "character/gato/narrativa/patricia_normal.png"
+    zoom 0.55
+    xpos 140
+    ypos 1290
+image Patricia asco:
+    "character/gato/narrativa/patricia_asco.png"
+    zoom 0.55
+    xpos 140
+    ypos 1290
+image Patricia contenta:
+    "character/gato/narrativa/patricia_contenta.png"
+    zoom 0.55
+    xpos 140
+    ypos 1290
+image Patricia triste:
+    "character/gato/narrativa/patricia_triste.png"
+    zoom 0.55
+    xpos 140
+    ypos 1290
+image Patricia enojada:
+    "character/gato/narrativa/patricia_enojada.png"
+    zoom 0.55
+    xpos 140
+    ypos 1290
 
 # Humano narrativa
-image humano neutro cerrada = "character/humano/humano_neutro_boca_cerrada.png"
-image humano neutro abierta = "character/humano/humano_neutro_boca_abierta.png"
-image humano molesto cerrada = "character/humano/humano_molesto_boca_cerrada.png"
-image humano molesto abierta = "character/humano/humano_molesto_boca_abierta.png"
+image Humano contento:
+    "character/humano/narrativa/humano_neutro_boca_cerrada.png"
+    zoom 0.8
+    xpos 1700
+    ypos 1350
+image Humano neutro:
+    "character/humano/narrativa/humano_molesto_boca_cerrada.png"
+    zoom 0.8
+    xpos 1700
+    ypos 1350
+image Humano enojado:
+    "character/humano/narrativa/humano_molesto_boca_abierta.png"
+    zoom 0.8
+    xpos 1700
+    ypos 1350
 
 # Humano escena
 image humano sentado dia = "character/humano/humano_sentado_dia.png"
@@ -92,11 +124,11 @@ default aplasto_teclado = False
 default pregunto_pajaro = False
 default jugo_caja = False
 
-image Patricia:
-    "gato_normal"
-    zoom 0.2
 
 
 # Aquí comienza el juego
+init python:
+    config.layers.append("top")
+
 label start:
     jump intro

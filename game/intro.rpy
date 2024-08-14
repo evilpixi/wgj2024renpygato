@@ -21,19 +21,19 @@ label intro:
     with dissolve
     $ renpy.pause(1)
 
-    # GATO NARRATIVA CAMBIAR!
 
-    # Aquí iría la introducción
+    # Introducción
+    show Patricia onlayer top
     g "Desde que llegó esa caja de luz a la casa, todos los días parecen iguales..."
-    
-    # PONER PATRICIA GIRADA HACIA EL HUMANO
     play sound ["meow_attention.mp3"]
     g "¿Estará bien? No parece estar bien. Me gustaría que se diera vuelta y me acariciara como antes."
     g "Ahora casi ni se mueve..."
     g "Sólo se levanta para ir a su caja de agua.. o para buscar comida."
     $ renpy.pause(2)
 
+    show Patricia triste onlayer top
     g "Esa caja de luz.. lo hipnotiza y le hace olvidar el tiempo."
+    show Patricia onlayer top
     g "¿Qué hago para que se levante de la silla? Tengo que investigar... tal vez así Humano vuelva a sonreír."
     $ renpy.pause(0)
 
