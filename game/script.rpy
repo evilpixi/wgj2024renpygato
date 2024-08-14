@@ -4,32 +4,12 @@ define h = Character("Humano", color="#28abe7")
 
 # Habitacion
 image habitacion humano = "bg/fondo_base_dia_con_humano.png"
-image habitacion base dia = "bg/fondo_dia.png"
-image habitacion base tarde = "bg/fondo_tarde.png"
-image habitacion base noche = "bg/fondo_noche.png"
-image final bueno = "bg/fondo_final_bueno.png"
-image final malo =  "bg/fondo_final_malo.png"
-
-# Humano narrativa
-image humano neutro cerrada = "character/humano/humano_neutro_boca_cerrada.png"
-image humano neutro abierta = "character/humano/humano_neutro_boca_abierta.png"
-image humano molesto cerrada = "character/humano/humano_molesto_boca_cerrada.png"
-image humano molesto abierta = "character/humano/humano_molesto_boca_abierta.png"
-
-
-# Humano escena
-image humano sentado dia = "character/humano/humano_sentado_dia.png"
-image humano sentado tarde = "character/humano/humano_sentado_tarde.png"
-image humano sentado noche = "character/humano/humano_sentado_noche.png"
-image humano girado dia = "character/humano/humano_sentado_girado_dia.png"
-image humano girado tarde = "character/humano/humano_sentado_girado_tarde.png"
-image humano girado noche = "character/humano/humano_sentado_girado_noche.png"
-image humano de pie = "character/humano/humano_de_pie.png"
-
-# Musica
-define musica_fondo = "audio/music/bgmusic.wav"
-define musica_final_bueno = "audio/music/goodend_music.wav"
-define musica_final_malo = "audio/music/badend_music.wav"
+image habitacion base dia = "bg/fondo_dia_v2.png"
+image habitacion base tarde = "bg/fondo_tarde_v2.png"
+image habitacion base noche = "bg/fondo_noche_v2.png"
+image final bueno = "bg/fondo_final_bueno_v2.png"
+image final malo =  "bg/fondo_final_malo_v2.png"
+image final malobis = "bg/fondo_final_malo_v2bis.png"
 
 # Objetos
 image caja dia = "bg/objetos/caja_dia.png"
@@ -62,6 +42,45 @@ image teclado gato = "bg/objetos/teclado_gato.png"
 image red tarde = "bg/objetos/red_tarde.png"
 image red noche = "bg/objetos/red_noche.png"
 
+# Gato escena
+image gato neutro = "character/gato/gato_neutro.png"
+image gato espalda dia = "character/gato/gato_espalda_dia.png"
+image gato espalda noche = "character/gato/gato_espalda_noche.png"
+image gato girado = "character/gato/gato_girado.png"
+image gato flip = "character/gato/gato_neutro_flip.png"
+image gato mirada abajo = "character/gato/gato_mirada_abajo.png"
+image gato boca abierta = "character/gato/gato_abierta.png"
+image gato bolita = "character/gato/gato_bolita.png"
+
+# Gato narrativa
+image patricia = "character/narrativa/gato/patricia_normal.png"
+image patricia asco = "character/narrativa/gato/patricia_asco.png"
+image patricia pregunta = "character/narrativa/gato/patricia_pregunta.png"
+image patricia triste = "character/narrativa/gato/patricia_triste.png"
+image patricia enojada = "character/narrativa/gato/patricia_enojada.png"
+
+# Humano narrativa
+image humano neutro cerrada = "character/humano/humano_neutro_boca_cerrada.png"
+image humano neutro abierta = "character/humano/humano_neutro_boca_abierta.png"
+image humano molesto cerrada = "character/humano/humano_molesto_boca_cerrada.png"
+image humano molesto abierta = "character/humano/humano_molesto_boca_abierta.png"
+
+# Humano escena
+image humano sentado dia = "character/humano/humano_sentado_dia.png"
+image humano sentado tarde = "character/humano/humano_sentado_tarde.png"
+image humano sentado noche = "character/humano/humano_sentado_noche.png"
+image humano girado dia = "character/humano/humano_sentado_girado_dia.png"
+image humano girado tarde = "character/humano/humano_sentado_girado_tarde.png"
+image humano girado noche = "character/humano/humano_sentado_girado_noche.png"
+image humano de pie = "character/humano/humano_de_pie.png"
+image humano nariz = "character/humano/humano_nariz_tarde.png"
+
+# Musica
+define musica_fondo = "audio/music/bgmusic.wav"
+define musica_final_bueno = "audio/music/goodend_music.wav"
+define musica_final_malo_bis = "audio/music/badend_music.wav"
+
+
 
 # variables
 default aciertos = 0
@@ -74,7 +93,7 @@ default pregunto_pajaro = False
 default jugo_caja = False
 
 image Patricia:
-    "gato"
+    "gato_normal"
     zoom 0.2
 
 

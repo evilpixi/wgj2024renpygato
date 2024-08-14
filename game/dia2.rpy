@@ -17,43 +17,45 @@ label dia2:
   if rompio_papel:
     show papel roto dia
   else:
-    show papel
+    show papel dia
 
-  show Patricia at Position(xpos=650, ypos=700)
+  show gato neutro:
+    xpos 620
+    ypos 480
+    zoom 0.2
 
   
   g "¿Hoy es hoy o todavía es ayer? Ya ni siquiera me doy cuenta, cada día es una eternidad infinita."
   g "Humano ya no me mira... sigue atrapado por esa caja de luz, esa maldita luz..."
 
   g "Ffffss Fffssss ¿de dónde viene ese aroma viscoso y delicioso?"
-  g "¡Mira lo que apareció en la cama!"
-
+  
   # Aparece la cuca
-  show cucaracha
+  show cucaracha behind gato
+  g "¡Mira lo que apareció en la cama!"  
   g "Ñaaaaaaami, ¡ya puedo saborearlo!"
   g "Aunque... pensándolo mejor. Podría cazarlo para Humano... y entonces me miraría a los ojos y diría con su alegre voz: \"¡Pat, esto es una masa! Sos increíble y genial\""
-
   g "Aunque también podría sentarme sobre la caja de luz y aplastar al fin ese meteorito incandescente."
   g "Me quedaría cerquita suyo, tan cerca y a oscuras..." 
   g "Meeooooww si tan sólo pudiera mirarlo una vez más..."
 
   # Cambio iluminación -> Tarde
   show habitacion base tarde with dissolve
-  hide humano sentado dia
   show humano sentado tarde
-  show pajaro tarde
+  show pajaro tarde behind humano
   show caja tarde at Position(xpos=1580, ypos=680)
 
   if comio_planta:
-    show flores comidas tarde
+    show flores comidas tarde behind humano
   else:
-    show flores tarde
+    show flores tarde behind humano
 
   if rompio_papel:
     show papel roto tarde
   else:
     show papel tarde
 
+  # Opciones Dia 2
   menu:
     "Cazar una cena viscosa para Humano":
       $ aciertos += 1
@@ -65,31 +67,59 @@ label dia2:
       $ aplasto_teclado = True
       jump teclado
 
+# Opcion cuca
 label ofrenda:
-  show Patricia at Position(xpos=770, ypos=670)
+  # Patricia atrapa la cucaracha
+  show gato mirada abajo:
+    xpos 740
+    ypos 465
+    zoom 0.2
+    xzoom -1
+  show cucaracha behind gato
+
   g "¡Meeowwii! Zarpada presa atrapé."
 
   play sound ["meow.mp3"]
   g "Humaaaaaaaaaanoooooooo, ¡mirá lo que tengo para vos!"
 
   pause 0.5
-
+  
+  # Humano la mira
+  show humano girado tarde
   g "..."
-  g "¿Pueden creerlo? Humano miró con asco mi regalo y lo tiró a esa bolsa en donde junta todas esas cosas que ya no le importan más."
-  g "Lo hizo mientras se tapaba la nariz. Ni siquiera se dio vuelta para agradecerme. Nada."
+  
+  # Humano se levanta, gata contenta
+  show gato boca abierta behind humano:
+    xpos 779
+    ypos 451
+    zoom 0.2
+  show cucaracha behind gato
+  show humano nariz:
+    xpos 600
+    ypos 1200
+    zoom 1.2
 
-  g "¡¡AAAAAGGGGR RRRRR!! De la bronca empiezo a rasguñar las patas de la cama, le clavo  las garras enfurecida."
-  g "Pero no sirve de nada... parece como si no existiera."
+
+  g "¿Pueden creerlo? Humano miró con asco mi regalo y lo tiró a esa bolsa en donde junta todas esas cosas que ya no le importan más."
+ 
+  # Humano vuelve a sentarse, cuca aparece en la basura
+  hide humano nariz
+  show humano sentado tarde
+  show cucaracha behind gato at Position(xpos=1400)
+
+  # Patricia de espalda mirando la basura
+  show gato espalda dia:
+    xpos 1260
+    ypos 630
+    zoom 0.7
+
+  g "Lo hizo mientras se tapaba la nariz. Ni siquiera se dio vuelta para agradecerme. Nada."
+  g "¡MEEAAAOOWW! Quisiera rasguñar esa caja, clavarle las garras hasta apagarla... Pero Humano nunca me dejaría."
+  play sound ["meow_begging.mp3"]
+  g "Meeow.. me siento tan triste."
+  g "Hay algo adentro mío que se está apagando.. ¡si tan sólo me abrazara una vez más!"
 
   # Cambio iluminación -> Noche
-  show habitacion base noche with dissolve
-  hide humano sentado tarde
-  show humano sentado noche
-  hide caja dia
-  show caja noche at Position(xpos=1580, ypos=680)
-  hide pajaro tarde
-  hide cucaracha with dissolve
-
   if comio_planta:
     show flores comidas noche
   else:
@@ -99,38 +129,46 @@ label ofrenda:
     show papel roto noche
   else:
     show papel noche
+  
+  show humano sentado noche
+  show caja noche at Position(xpos=1580, ypos=680)
+  hide pajaro tarde
+  hide cucaracha
+  show gato bolita:
+    xpos 660
+    ypos 560
+    zoom 0.9
+  show habitacion base noche with dissolve
+
 
   play sound ["meow_begging.mp3"]
   g "¿Existo? ¿o estoy empezando a desaparecer?"
   jump finDia2
 
+# Opcion teclado
 label teclado:
   g "El primer salto es fácil, lo conozco de memoria."
-  hide Patricia with dissolve
-  show Patricia at Position(xpos=600, ypos=460)with dissolve
+  show gato neutro:
+    xpos 490
+    ypos 250
+    zoom 0.2
+    xzoom -1
   hide cucaracha with dissolve
   
   
   g "Cuando llego a las piernas de Humano, vuelvo a saltar y finalmente me acurruco sobre el escritorio, tapando con mi cuerpo la caja de luz."
-  hide Patricia
+  # Aparece Patricia sobre teclado
+  hide gato neutro
   show teclado gato with dissolve
-
 
   g "La caja de luz es sorprendentemente cómoda.. ejem digo... ¡¡¡LA ODIO CON TODO EL MEEEEOOOOWWW!!!"
   g "Ahora que estoy arriba, giro la cabeza buscando la mirada de Humano."
 
   g "Por un ratito nuestras miradas se encuentran y al fin puedo ver..."
   g "Sus profundos ojos negros, como la inmensidad del cielo estrellado. Mi refugio favorito."
-  g "Pero no dura nada. Unas nubes grises y espesas atraviesan sus mirada, llevando sus pensamientos lejos mío."
+  g "Pero no dura nada. Unas nubes grises y espesas atraviesan su mirada, llevando sus pensamientos lejos mío."
   
   # Cambio iluminación -> Noche
-  show habitacion base noche with dissolve
-  hide humano sentado tarde
-  show humano sentado noche
-  show caja noche at Position(xpos=1580, ypos=680)
-  hide pajaro tarde
-
-
   if comio_planta:
     show flores comidas noche
   else:
@@ -140,6 +178,18 @@ label teclado:
     show papel roto noche
   else:
     show papel noche
+  
+  hide pajaro tarde
+  hide teclado gato
+  show humano sentado noche
+  show caja noche at Position(xpos=1580, ypos=680)
+  show gato bolita:
+    xpos 660
+    ypos 560
+    zoom 0.9
+  show habitacion base noche with dissolve
+
+
 
   play sound ["meow_begging.mp3"]
   g "¿A dónde vas Humano? Estás acá... pero no estás."

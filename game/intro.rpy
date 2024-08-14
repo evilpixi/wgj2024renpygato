@@ -13,13 +13,20 @@ label intro:
 
     $ renpy.pause(2)
     
-    show Patricia at truecenter
+    # Patricia en la cama, mira hacia el humano
+    show gato flip:
+        xpos 650
+        ypos 500
+        zoom 0.2
     with dissolve
     $ renpy.pause(1)
+
+    # GATO NARRATIVA CAMBIAR!
 
     # Aquí iría la introducción
     g "Desde que llegó esa caja de luz a la casa, todos los días parecen iguales..."
     
+    # PONER PATRICIA GIRADA HACIA EL HUMANO
     play sound ["meow_attention.mp3"]
     g "¿Estará bien? No parece estar bien. Me gustaría que se diera vuelta y me acariciara como antes."
     g "Ahora casi ni se mueve..."
