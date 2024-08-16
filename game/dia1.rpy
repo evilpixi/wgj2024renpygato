@@ -27,6 +27,7 @@ label dia1:
   g "¿Y si arruino su caja de baño? Sé que prometí no volver a hacerlo pero... ¡es tan divertido!"
   show Patricia contenta onlayer top
   g "Podría jugar un rato con esa serpiente de papel... ¡y a Humano no le quedaría otra que salir a comprar más!" 
+  show Patricia pregunta onlayer top
   g "Chau silla, chau caja de luz odiosa. Pero.. ¿cuál es la mejor forma de hacer que Humano se levante?"
 
   # Cambio iluminación -> Tarde
@@ -86,10 +87,10 @@ label plantas:
     zoom 0.2
   
   h "...hiciste bien en morder esas hojas, ¡esta planta necesitaba una poda! Y yo últimamente no tengo tiempo ni ganas de nada..."
-  hide Humano onlayer top
   $ renpy.pause(1)
   
   # Humano vuelve a mirar la caja de luz
+  hide Humano onlayer top
   show humano sentado tarde
   show Patricia enojada onlayer top
   g "¡Tanto mordisquear para nada! La caja de luz volvió a atrapar a Humano." 
@@ -131,9 +132,9 @@ label papel:
   show humano girado tarde
 
   # Patricia toda contenta
-  show gato boca abierta flip:
-    xpos 1550
-    ypos 590
+  show gato parado:
+    xpos 1600
+    ypos 580
     zoom 0.2
   
   g "¡Tengo que seguir haciéndolo todas mis vidas!"
@@ -141,19 +142,20 @@ label papel:
   
   # Se levanta el humano
   show humano de pie
+  show Patricia pregunta onlayer top
   g "Mientras araño el papel y lo convierto en tiritas, Humano se acerca a mí."
   g "Me observa primero a mí y después a la gran piel de serpiente blanca desparramada en el piso de madera."
   show Patricia enojada onlayer top
-  show gato flip:
-    xpos 1550
-    ypos 590
-    zoom 0.2
   g "Pero ¡ni siquiera le importa! Tiene un caja gigante llena de serpientes de papel guardadas..."
   $ renpy.pause(2)
 
   # Se vuelve a sentar el humano
   show humano sentado tarde
   show Patricia triste onlayer top
+  show gato flip:
+    xpos 1580
+    ypos 590
+    zoom 0.2
   g "Ahora que vuelve a sentarse frente a la caja de luz...." 
   g "No sé.. la diversión se apagó y una serpiente de tristeza se retuerce adentro mío."
 

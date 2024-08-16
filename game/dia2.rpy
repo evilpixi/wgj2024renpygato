@@ -20,8 +20,8 @@ label dia2:
   else:
     show papel dia
 
-  show gato neutro:
-    xpos 620
+  show gato flip:
+    xpos 580
     ypos 480
     zoom 0.2
 
@@ -29,16 +29,28 @@ label dia2:
   g "¿Hoy es hoy o todavía es ayer? Ya ni siquiera me doy cuenta, cada día es una eternidad infinita."
   g "Humano ya no me mira... sigue atrapado por esa caja de luz, esa maldita luz..."
 
+  show gato parado flip:
+    xpos 580
+    ypos 450
+    zoom 0.2
   show Patricia triste onlayer top  
   g "Ffffss Fffssss ¿de dónde viene ese aroma viscoso y delicioso?"
   
   # Aparece la cuca
+  show gato mirada abajo:
+    xpos 600
+    ypos 480
+    zoom 0.2
   show cucaracha behind gato
-  show Patricia contenta onlayer top
+  show Patricia pregunta onlayer top
   g "¡Mira lo que apareció en la cama!"  
   g "Ñaaaaaaami, ¡ya puedo saborearlo!"
   g "Aunque... pensándolo mejor. Podría cazarlo para Humano... y entonces me miraría a los ojos y diría con su alegre voz: \"¡Pat, esto es una masa! Sos increíble y genial\""
   show Patricia onlayer top
+  show gato flip:
+    xpos 600
+    ypos 480
+    zoom 0.2
   g "Aunque también podría sentarme sobre la caja de luz y aplastar al fin ese meteorito incandescente."
   g "Me quedaría cerquita suyo, tan cerca y a oscuras..." 
   show Patricia triste onlayer top
@@ -96,6 +108,7 @@ label ofrenda:
   
   # Humano la mira
   show humano girado tarde
+  show Patricia pregunta onlayer top 
   g "..."
   
   # Humano se levanta, gata contenta
@@ -141,10 +154,8 @@ label ofrenda:
   show caja noche at Position(xpos=1580, ypos=680)
   hide pajaro tarde
   hide cucaracha
-  show gato bolita:
-    xpos 660
-    ypos 560
-    zoom 0.9
+  show gato bolita at truecenter:
+    zoom 1.05
   show habitacion base noche with dissolve
 
   g "¿Existo? ¿o estoy empezando a desaparecer?"
@@ -153,6 +164,10 @@ label ofrenda:
 # Opcion teclado
 label teclado:
   show Patricia onlayer top
+  show gato parado:
+    xpos 600
+    ypos 470
+    zoom 0.2
   g "El primer salto es fácil, lo conozco de memoria."
   show gato flip:
     xpos 490
@@ -168,7 +183,7 @@ label teclado:
   g "La caja de luz es sorprendentemente cómoda.. ejem digo... ¡¡¡LA ODIO CON TODO EL MEEEEOOOOWWW!!!"
   g "Ahora que estoy arriba, giro la cabeza buscando la mirada de Humano."
   g "Por un ratito nuestras miradas se encuentran y al fin puedo ver..."
-  show Patricia contenta onlayer top
+  show Patricia pregunta onlayer top
   g "Sus profundos ojos negros, como la inmensidad del cielo estrellado. Mi refugio favorito."
   show Patricia triste onlayer top
   g "Pero no dura nada. Unas nubes grises y espesas atraviesan su mirada, llevando sus pensamientos lejos mío."
@@ -188,10 +203,7 @@ label teclado:
   hide teclado gato
   show humano sentado noche
   show caja noche at Position(xpos=1580, ypos=680)
-  show gato bolita:
-    xpos 660
-    ypos 560
-    zoom 0.9
+  show gato bolita at truecenter
   show habitacion base noche with dissolve
 
 

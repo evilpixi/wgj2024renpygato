@@ -62,6 +62,8 @@ image gato mirada abajo = "character/gato/gato_mirada_abajo.png"
 image gato mirada abajo flip = "character/gato/gato_mirada_abajo_flip.png"
 image gato boca abierta flip = "character/gato/gato_abierta_flip.png"
 image gato bolita = "character/gato/gato_bolita.png"
+image gato parado = "character/gato/gato_parado.png"
+image gato parado flip = "character/gato/gato_parado_flip.png"
 
 # Gato narrativa
 image Patricia:
@@ -76,6 +78,11 @@ image Patricia asco:
     ypos 1290
 image Patricia contenta:
     "character/gato/narrativa/patricia_contenta.png"
+    zoom 0.55
+    xpos 140
+    ypos 1290
+image Patricia pregunta:
+    "character/gato/narrativa/patricia_pregunta.png"
     zoom 0.55
     xpos 140
     ypos 1290

@@ -9,8 +9,8 @@ label dia3:
   show caja dia at Position(xpos=1580, ypos=680)
   show pajaro dia
   show gato flip:
-    xpos 1520
-    ypos 490
+    xpos 870
+    ypos 370
     zoom 0.2
   
   if comio_planta:
@@ -33,9 +33,9 @@ label dia3:
   
   play sound ["hornero.mp3"]
   show Patricia onlayer top
-  show gato flip:
+  show gato parado:
     xpos 700
-    ypos 500
+    ypos 450
     zoom 0.2
   g "¿por qué me mira, qué quiere?"
   show Patricia enojada onlayer top
@@ -98,7 +98,7 @@ label ventana:
   play sound ["meow_far.mp3"]
   show Patricia contenta onlayer top
   g "Saludo al pájaro - Meeeowwwlaa!- mientras el olor a verano despeina mis bigotes. Él se acerca y yo siento como si estuviera sosteniendo un secreto con el pico, sólo para mí."
-  show Patricia onlayer top
+  show Patricia pregunta onlayer top
   g "Cuando está a punto de abrir el pico, saludarme o tal vez soltar el secreto... escucho un grito de terror que me pone los pelos de punta...."
 
   # Humano la mira
@@ -113,12 +113,12 @@ label ventana:
     ypos 500
     zoom 0.2
 
-  hide Humano onlayer top
   g "Humano al fin me mira... pero está asustado y nervioso."
   show Patricia triste onlayer top
   g "Quiero explicarle que estoy bien, quiero hablarle del secreto del pájaro, pero me agarra con las manos temblorosas y me aleja de la ventana."
   
   # Humano vuelve a mirar en frente
+  hide Humano onlayer top
   hide Patricia onlayer top with dissolve
   hide pajaro tarde
   show humano sentado tarde 
@@ -167,8 +167,22 @@ label caja:
     ypos 490
     zoom 0.2
 
+  show gato parado flip:
+    xpos 700
+    ypos 450
+    zoom 0.2
   show Patricia onlayer top
-  g "El pájaro puede esperar, pero ¡esa caja! Es irresistible..."
+  g "El pájaro puede esperar, pero ¡esa caja!"
+  show gato parado flip:
+    xpos 1050
+    ypos 590
+    zoom 0.2
+  g "Es irresistible..."
+
+  show gato parado flip:
+    xpos 1400
+    ypos 445
+    zoom 0.2
   show Patricia contenta onlayer top
   g "Me froto contra ella, una y otra vez, aprovechando su filosas superficies."
   
@@ -185,6 +199,7 @@ label caja:
   # Humano se levanta y la mira
   show humano de pie at Position(xpos=1000)
   g "De repente, siento un calor conocido."
+  show Patricia pregunta onlayer top
   g "Una voz me abraza, mientras me sostiene la ternura de una caricia que creí que nunca más iba a volver a sentir..."
   show Patricia contenta onlayer top
   g "¡Son sus manos! Firmes, cálidas y seguras."
@@ -197,10 +212,12 @@ label caja:
 
   show Patricia onlayer top
   g "Sonreía por primera vez en mucho tiempo.. sonreía y lloraba.." 
+  show Patricia pregunta onlayer top
   g "¡qué Humano tan extraño! Pero no lo cambiaría por ningún pájaro, ninguna caja de cartón o de luz."
   show Patricia contenta onlayer top
   g "Era mi Humano y hoy al fin había vuelto."
 
+  show Patricia pregunta onlayer top
   show Humano contento onlayer top
   h "Es hora de salir afuera Pat, ¿vamos a la plaza?"
   
