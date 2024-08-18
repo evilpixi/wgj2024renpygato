@@ -108,11 +108,11 @@ label ventana:
   h "¡¿¡PATRICIA QUÉ HACES!?! ¡BAJATE DE AHÍ!"
 
   # Patricia se vuelve a la cama
-  show gato neutro:
+  hide gato girado
+  show gato flip:
     xpos 700
     ypos 500
     zoom 0.2
-
   g "Humano al fin me mira... pero está asustado y nervioso."
   show Patricia triste onlayer top
   g "Quiero explicarle que estoy bien, quiero hablarle del secreto del pájaro, pero me agarra con las manos temblorosas y me aleja de la ventana."
@@ -122,11 +122,6 @@ label ventana:
   hide Patricia onlayer top with dissolve
   hide pajaro tarde
   show humano sentado tarde 
-
-  # Aparece reja ventana
-  $ renpy.pause(2) 
-
-  show red tarde behind flores
 
   $ renpy.pause(2)
   # Cambio iluminación -> Noche
@@ -139,21 +134,24 @@ label ventana:
     show papel roto noche
   else:
     show papel noche
-    
-  show red noche
+
+  hide gato flip
+  show gato flip noche:
+    xpos 700
+    ypos 500
+    zoom 0.2
   show humano sentado noche
   show caja noche at Position(xpos=1580, ypos=680)
-  show red noche behind flores
   show habitacion base noche with dissolve
 
-  # Aparece reja ventana
-  $ renpy.pause(2) 
-  show red noche
-
   $ renpy.pause(2) 
 
-  # Aparece habitacion gris
-  show final malobis with dissolve
+  # FINAL MALO
+  show final malo with dissolve
+  show gato espalda noche onlayer top:
+    xpos 700
+    ypos 500
+    zoom 0.7
   play sound ["meow_begging.mp3"]
   g "Los días siguen siendo iguales.. Humano sentado en su escritorio, la comida sin sabor."
   g "Pero ahora la ventana tiene rejas y yo observo, desde mi pequeña jaula."
@@ -179,9 +177,9 @@ label caja:
     zoom 0.2
   g "Es irresistible..."
 
-  show gato parado flip:
-    xpos 1400
-    ypos 445
+  show gato neutro:
+    xpos 1500
+    ypos 480
     zoom 0.2
   show Patricia contenta onlayer top
   g "Me froto contra ella, una y otra vez, aprovechando su filosas superficies."
@@ -197,6 +195,7 @@ label caja:
   g "Desde esta oscuridad de cartón... el mundo da menos miedo."
   
   # Humano se levanta y la mira
+  show habitacion tarde final
   show humano de pie at Position(xpos=1000)
   g "De repente, siento un calor conocido."
   show Patricia pregunta onlayer top

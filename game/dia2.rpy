@@ -76,12 +76,12 @@ label dia2:
   # Opciones Dia 2
   menu:
     "Cazar una cena viscosa para Humano":
-      $ aciertos += 1
+      $ aciertos += 0
       $ ofrecio_cucaracha = True
       jump ofrenda
 
     "Aplastar la (odiosa) caja de luz":
-      $ aciertos += 0
+      $ aciertos += 1
       $ aplasto_teclado = True
       jump teclado
 

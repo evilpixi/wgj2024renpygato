@@ -3,13 +3,13 @@ define g = Character("Patricia", color="#926a54")
 define h = Character("Humano", color="#28abe7")
 
 # Habitacion
-image habitacion humano = "bg/fondo_base_dia_con_humano.png"
-image habitacion base dia = "bg/fondo_dia_v2.png"
-image habitacion base tarde = "bg/fondo_tarde_v2.png"
-image habitacion base noche = "bg/fondo_noche_v2.png"
-image final bueno = "bg/fondo_final_bueno_v2.png"
-image final malo =  "bg/fondo_final_malo_v2.png"
-image final malobis = "bg/fondo_final_malo_v2bis.png"
+image habitacion base dia = "bg/fondo_dia_v3.png"
+image habitacion base tarde = "bg/fondo_tarde_v3.png"
+image habitacion tarde final = "bg/fondo_tarde_v2.png"
+image habitacion base noche = "bg/fondo_noche_v3.png"
+image brillo pantalla = "bg/brillo_pantalla.png"
+image final bueno = "bg/fondo_final_bueno_v3.png"
+image final malo =  "bg/fondo_final_malo_v3.png"
 
 # Objetos
 image caja dia = "bg/objetos/caja_dia.png"
@@ -55,6 +55,7 @@ image rasguñar gato dia = "bg/objetos/rasguñar_gato_dia.png"
 # Gato escena
 image gato neutro = "character/gato/gato_neutro.png"
 image gato flip = "character/gato/gato_neutro_flip.png"
+image gato flip noche = "character/gato/gato_neutro_noche_flip.png"
 image gato espalda dia = "character/gato/gato_espalda_dia.png"
 image gato espalda noche = "character/gato/gato_espalda_noche.png"
 image gato girado = "character/gato/gato_girado.png"
@@ -117,7 +118,7 @@ image Humano enojado:
 # Humano escena
 image humano sentado dia = "character/humano/humano_sentado_dia.png"
 image humano sentado tarde = "character/humano/humano_sentado_tarde.png"
-image humano sentado noche = "character/humano/humano_sentado_noche.png"
+image humano sentado noche = "character/humano/humano_sentado_noche_v2.png"
 image humano girado dia = "character/humano/humano_sentado_girado_dia.png"
 image humano girado tarde = "character/humano/humano_sentado_girado_tarde.png"
 image humano girado noche = "character/humano/humano_sentado_girado_noche.png"
