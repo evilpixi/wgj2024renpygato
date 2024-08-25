@@ -1,3 +1,3 @@
 label final_malo:
-  "FIN"
+  "FIN\n\nTodo sigue igual... ¡Intentalo de nuevo!"
   return

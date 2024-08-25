@@ -41,11 +41,17 @@ label dia3:
   show Patricia enojada onlayer top
   g "Ya fue, me cansé. Necesito que algo cambie, ¡lo necesito desesperadamente!"
   show Patricia onlayer top
-  g "Si no hay nada que yo pueda hacer, tal vez.. tal vez el pájaro sea la respuesta."
+  g "Si no hay nada que yo pueda hacer, tal vez... tal vez el pájaro sea la respuesta."
   show Patricia onlayer top
-  g "Me acerco despacio a la ventana, pero en el camino mi suave cola marroncita roza una de las cajas de cartón.."
+  g "Me acerco despacito a la ventana... pero antes de decir miau veo en el reflejo de la ventana una cosa maravillosa, de la que me había olvidado completamente..."
   show Patricia contenta onlayer top
-  g "¡qué sensación increíble! Se siente casi.. casi como una caricia."
+  show gato parado flip:
+    xpos 700
+    ypos 450
+    zoom 0.2
+  g "¡un paraíso de cartón!"
+  g "Meeoooowww me acuerdo cuando jugábamos con Humano a escondernos y encontrarnos... Hace tanto tiempo que Humano no juega..."
+  g "y la sensación del cartón rascando mi lomo... se sentía casi como una caricia..."
   
   # Patricia se mueve
   show Patricia onlayer top
@@ -84,7 +90,11 @@ label dia3:
 # Opcion pajaro
 label ventana:
   show Patricia onlayer top
-  g "Decido confiar en el pájaro y sigo avanzando hacia la ventana, esquivando las cajas.."
+  show gato parado:
+    xpos 700
+    ypos 450
+    zoom 0.2
+  g "Decido confiar en el pájaro y sigo avanzando hacia la ventana..."
  
   # Patricia se mueve al lado del pájaro y lo mira
   show gato girado:
@@ -92,7 +102,7 @@ label ventana:
     ypos 250
     zoom 0.2
     xzoom -1
-  g "Mientras trepo por el acolchado, siento el calor del sol acariciándome el lomo. Rayos de luz atraviesan la ventana y me envuelven en una calidez antigua, lejana y permanente."
+  g "Ahora que estoy arriba, siento el calor del sol acariciándome. Rayos de luz atraviesan la ventana y me envuelven en una calidez antigua, lejana y permanente."
   g "Desde la ventana veo la plaza: árboles frondosos y fuentes de agua, una nena con trenzas sostiene un barrilete naranja."
   
   play sound ["meow_far.mp3"]
@@ -153,7 +163,7 @@ label ventana:
     ypos 500
     zoom 0.7
   play sound ["meow_begging.mp3"]
-  g "Los días siguen siendo iguales.. Humano sentado en su escritorio, la comida sin sabor."
+  g "Los días siguen siendo iguales... Humano sentado en su escritorio, la comida sin sabor."
   g "Pero ahora la ventana tiene rejas y yo observo, desde mi pequeña jaula."
   g "Al pájaro, nunca más lo volví a ver. Y cuando intento recordar los ojos de Humano, sólo puedo pensar en una luz brillante y dolorosa, como la luz de la caja."
   jump final
@@ -197,20 +207,18 @@ label caja:
   # Humano se levanta y la mira
   show habitacion tarde final
   show humano de pie at Position(xpos=1000)
-  g "De repente, siento un calor conocido."
+  g "De repente, me envuelve un calor conocido."
   show Patricia pregunta onlayer top
-  g "Una voz me abraza, mientras me sostiene la ternura de una caricia que creí que nunca más iba a volver a sentir..."
+  g "¡Humano me está mirando otra vez! ¡Meeeeeooow!"
+  g "Se levantó de su silla y la caja de luz... ya no tiene luz."
   show Patricia contenta onlayer top
-  g "¡Son sus manos! Firmes, cálidas y seguras."
-  show Patricia onlayer top
-  g "Mientras jugaba con las cajas, Humano me había estado observando..." 
-  g "...se había levantado de la silla y alejado de su caja de luz..  ya sin luz."
+  g "Lo miro sonriendo Meeeeowww...  sus ojos de noche estrellada, vuelven a ser mi refugio."
 
   show Humano neutro onlayer top
   h "Creo que ya pasó demasiado tiempo, ¿no Pat?"
 
   show Patricia onlayer top
-  g "Sonreía por primera vez en mucho tiempo.. sonreía y lloraba.." 
+  g "Sonreía por primera vez en mucho tiempo... sonreía y lloraba..." 
   show Patricia pregunta onlayer top
   g "¡qué Humano tan extraño! Pero no lo cambiaría por ningún pájaro, ninguna caja de cartón o de luz."
   show Patricia contenta onlayer top

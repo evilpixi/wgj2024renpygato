@@ -173,14 +173,13 @@ label teclado:
     xpos 490
     ypos 250
     zoom 0.2
-  hide cucaracha with dissolve
   
-  g "Cuando llego a las piernas de Humano, vuelvo a saltar y finalmente me acurruco sobre el escritorio, tapando con mi cuerpo la caja de luz."
+  g "Desde acá veo la cara de Humano llena de luz...  meeow, ¡un salto más!"
   # Aparece Patricia sobre teclado
   hide gato neutro
   show teclado gato with dissolve
 
-  g "La caja de luz es sorprendentemente cómoda.. ejem digo... ¡¡¡LA ODIO CON TODO EL MEEEEOOOOWWW!!!"
+  g "Me acurruco sobre la caja, tapando su luz. ¡Grrrrr qué calorcito lindo! ejeem... digo.... ¡qué caja más desagradable!"
   g "Ahora que estoy arriba, giro la cabeza buscando la mirada de Humano."
   g "Por un ratito nuestras miradas se encuentran y al fin puedo ver..."
   show Patricia pregunta onlayer top
@@ -202,9 +201,11 @@ label teclado:
   hide pajaro tarde
   hide teclado gato
   show humano sentado noche
+  hide cucaracha
   show caja noche at Position(xpos=1580, ypos=680)
   show gato bolita at truecenter
   show habitacion base noche with dissolve
+
 
 
 
